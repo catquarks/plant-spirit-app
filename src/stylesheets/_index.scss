@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css?family=Arsenal');
+
+@import "materialize-css/sass/components/_color.scss";
+
+$background-color: color("cyan", "lighten-4") !default;
+$primary-color: color("cyan", "darken-2") !default;
+$secondary-color: color("cyan", "accent-4") !default;
+
+/*@import 'materialize-css/bin/materialize.css';*/
+
+
+body {
+  background: $background-color;
+	margin-left: 10%;
+	margin-right: 15%;
+  margin-bottom: 15%;
+  font-family: 'Arsenal', sans-serif;
+
+}
+
+img {
+	/*max-width: 250px;*/
+	height: auto;
+}
+
+
+nav ul a,
+nav .brand-logo {
+  background: $primary-color;
+  color: #111;
+}
+
+nav[role=navigation] {
+  background: $primary-color;
+}
+
+
+.btn {
+  vertical-align: center;
+  height: auto;
+  max-height: 6em;
+  word-wrap: break-word;
+  text-transform: capitalize;
+  margin: 10px;
+  color: #444;
+}
+
+.crud {
+  background: $primary-color;
+  color: #eee;
+}
+
+
+
+p {
+  font-size: 1rem;
+  line-height: 2rem;
+}
+
+.button-collapse {
+  color: #26a69a;
+}
+
+
+
+@media only screen and (max-width : 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
+}
+
+@media only screen and (max-width : 600px) {
+  #index-banner .section {
+    top: 0;
+  }
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+footer.page-footer {
+  margin: 0;
+}
+
