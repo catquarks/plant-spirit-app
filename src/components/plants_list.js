@@ -8,7 +8,7 @@ class PlantsList extends React.Component {
 			<div className="plantsList">
 				{this.props.plants.map(plant => {
 					return(
-						<p>{plant.name}</p>
+						<p key={plant.id}>{plant.name}</p>
 					)
 				})}
 			</div>

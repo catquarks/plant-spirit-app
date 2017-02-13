@@ -10,7 +10,7 @@ class App extends Component {
     return (
       <div className="App">
         <NavBar />
-        <p>Welcome. :) How are you feeling?</p>
+        <p>How are you feeling?</p>
         <br />
         <FeelingForm />
         <PlantsList />

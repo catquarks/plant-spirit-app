@@ -5,6 +5,7 @@
 $background-color: color("cyan", "lighten-4") !default;
 $primary-color: color("cyan", "darken-2") !default;
 $secondary-color: color("cyan", "accent-4") !default;
+$text-color: #eee;
 
 body {
   background: $background-color;
@@ -12,8 +13,9 @@ body {
 	margin-right: 15%;
   margin-bottom: 15%;
   font-family: 'Arsenal', sans-serif;
-
 }
+
+
 
 img {
 	/*max-width: 250px;*/
@@ -24,7 +26,7 @@ img {
 nav ul a,
 nav .brand-logo {
   background: $primary-color;
-  color: #111;
+  color: $text-color;
 }
 
 nav[role=navigation] {
@@ -40,7 +42,7 @@ nav[role=navigation] {
   word-wrap: break-word;
   text-transform: capitalize;
   margin: 10px;
-  color: #444;
+  color: $text-color;
 }
 
 .btn:active {

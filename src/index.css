@@ -1615,7 +1615,7 @@ img {
 nav ul a,
 nav .brand-logo {
   background: #0097a7;
-  color: #111; }
+  color: #eee; }
 
 nav[role=navigation] {
   background: #0097a7; }
@@ -1628,7 +1628,7 @@ nav[role=navigation] {
   word-wrap: break-word;
   text-transform: capitalize;
   margin: 10px;
-  color: #444; }
+  color: #eee; }
 
 .btn:active {
   background: red; }
