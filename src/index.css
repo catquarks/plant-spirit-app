@@ -1601,7 +1601,6 @@
 .transparent-text {
   color: transparent !important; }
 
-/*@import 'materialize-css/bin/materialize.css';*/
 body {
   background: #b2ebf2;
   margin-left: 10%;
@@ -1622,6 +1621,7 @@ nav[role=navigation] {
   background: #0097a7; }
 
 .btn {
+  background: #0097a7;
   vertical-align: center;
   height: auto;
   max-height: 6em;
@@ -1629,6 +1629,12 @@ nav[role=navigation] {
   text-transform: capitalize;
   margin: 10px;
   color: #444; }
+
+.btn:active {
+  background: red; }
+
+.btn:hover {
+  background: #00b8d4; }
 
 .crud {
   background: #0097a7;

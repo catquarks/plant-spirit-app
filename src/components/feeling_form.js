@@ -25,28 +25,37 @@ class FeelingForm extends React.Component {
 	handleSubmit(e){
 		e.preventDefault();
 		e.stopPropagation();
-		this.props.actions.fetchPlants(this.state.query)
+
+		const result = this.props.feelings.find(feeling => {
+			return feeling.name === this.state.query
+		})
+
+		if (result === undefined){
+			alert('Is there another way to describe your feeling?')
+		} else {
+			this.props.actions.fetchPlants(this.state.query)
+		}
 	}
 
 	render(){
 		return(
 			<div className="FeelingForm">
 	     	<form onSubmit={this.handleSubmit}>
-	        <input type="text" name="feeling" value={this.state.query} onChange={this.handleChange} />
+	        <input list="feelings" name="feeling" value={this.state.query} onChange={this.handleChange} />
+
+	        <datalist id="feelings">
+					{this.props.feelings.filter(feeling => {
+
+						return (feeling.name.includes(this.state.query))})
+							.map(feeling => {
+								return(
+									<option key={feeling.id} value={feeling.name} />
+								)
+					})}
+	        	
+	        </datalist>
 	        <input type="submit" className="waves-effect waves-light btn" />
 	      </form>
-				<div className="available-feelings">
-				{this.props.feelings.filter(feeling => {
-
-					return (this.state.query === "") || (feeling.name.includes(this.state.query.toLowerCase()))})
-						.map(feeling => {
-							return(
-									<p key={feeling.id}>{feeling.name}</p>
-							)
-				})}
-
-				</div>
-
       </div>
 		)
 	}

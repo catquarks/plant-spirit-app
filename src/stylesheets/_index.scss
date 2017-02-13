@@ -6,9 +6,6 @@ $background-color: color("cyan", "lighten-4") !default;
 $primary-color: color("cyan", "darken-2") !default;
 $secondary-color: color("cyan", "accent-4") !default;
 
-/*@import 'materialize-css/bin/materialize.css';*/
-
-
 body {
   background: $background-color;
 	margin-left: 10%;
@@ -36,6 +33,7 @@ nav[role=navigation] {
 
 
 .btn {
+  background: $primary-color;
   vertical-align: center;
   height: auto;
   max-height: 6em;
@@ -43,6 +41,14 @@ nav[role=navigation] {
   text-transform: capitalize;
   margin: 10px;
   color: #444;
+}
+
+.btn:active {
+  background: red;
+}
+
+.btn:hover {
+  background: $secondary-color;
 }
 
 .crud {
