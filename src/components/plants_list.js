@@ -1,16 +1,19 @@
 import React from 'react'
-import {connect} from 'react-redux'
+import { connect } from 'react-redux'
+import PlantShow from './plant_show'
 
 class PlantsList extends React.Component {
 
 	render(){
 		return(
-			<div className="plantsList">
+			<div id="plants-list">
+				<div className="plant-show-container">
 				{this.props.plants.map(plant => {
 					return(
-						<p key={plant.id}>{plant.name}</p>
+						<PlantShow key={plant.id} name={plant.name} summary={plant.summary} image={plant.image} />
 					)
 				})}
+				</div>
 			</div>
 		)
 	}
@@ -18,7 +21,8 @@ class PlantsList extends React.Component {
 
 function mapStateToProps(state){
 	return({
-		plants: state.plants
+		plants: state.plants,
+		currentFeeling: state.currentFeeling
 	})
 }
 

@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "proxy": "http://localhost:3000",
+  "realProxy": "https://plant-spirit-app.herokuapp.com",
   "devDependencies": {
     "nodemon": "^1.11.0",
     "npm-sass": "^2.0.0",
@@ -21,7 +22,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "build-css": "npm-sass ./src/stylesheets/_index.scss > ./src/index.css",
+    "build-css": "npm-sass ./src/stylesheets/_main.scss > ./src/main.css",
     "watch-css": "nodemon -e scss -x  \"npm run build-css\""
   }
 }

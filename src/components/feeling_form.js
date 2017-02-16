@@ -2,7 +2,6 @@ import React from 'react'
 import * as actions from '../actions'
 import {bindActionCreators} from 'redux'
 import {connect} from 'react-redux'
-import './feeling_form.css'
 
 class FeelingForm extends React.Component {
 	constructor(props){
@@ -13,40 +12,51 @@ class FeelingForm extends React.Component {
 
 		this.handleChange = this.handleChange.bind(this)
 		this.handleSubmit = this.handleSubmit.bind(this)
+		this.filterFeeling = this.filterFeeling.bind(this)
 	}
 
 	handleChange(e){
 		this.setState({
 			query: e.target.value
 		})
-
 	}
 
 	handleSubmit(e){
 		e.preventDefault();
 		e.stopPropagation();
+		this.setState({query: ''})
 
-		const result = this.props.feelings.find(feeling => {
+		const queriedFeeling = this.props.feelings.find(feeling => {
 			return feeling.name === this.state.query
 		})
 
-		if (result === undefined){
+		if (queriedFeeling === undefined){
 			alert('Is there another way to describe your feeling?')
 		} else {
-			this.props.actions.fetchPlants(this.state.query)
+			this.props.actions.fetchPlants(this.state.query, this.props.appMode)
+			const currentFeeling = this.props.feelings.find(feeling => {
+				return feeling.name === this.state.query
+			})
+			this.props.actions.setCurrentFeeling(currentFeeling)
+		}
+	}
+
+	filterFeeling(feeling){
+		if (feeling[this.props.appMode].length > 0){
+			return feeling.name.includes(this.state.query)
 		}
 	}
 
 	render(){
 		return(
-			<div className="FeelingForm">
+			<div id="feeling-form ">
 	     	<form onSubmit={this.handleSubmit}>
-	        <input list="feelings" name="feeling" value={this.state.query} onChange={this.handleChange} />
+	        <input type="text" list="feelings" name="feeling" value={this.state.query} onChange={this.handleChange} />
 
 	        <datalist id="feelings">
 					{this.props.feelings.filter(feeling => {
-
-						return (feeling.name.includes(this.state.query))})
+						return this.filterFeeling(feeling)
+							})
 							.map(feeling => {
 								return(
 									<option key={feeling.id} value={feeling.name} />
@@ -59,12 +69,12 @@ class FeelingForm extends React.Component {
       </div>
 		)
 	}
-
 }
 
 function mapStateToProps(state){
 	return({
-		feelings: state.feelings
+		feelings: state.feelings,
+		appMode: state.appMode
 	})
 }
 

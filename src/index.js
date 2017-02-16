@@ -9,12 +9,11 @@ import * as actions from './actions'
 
 import 'materialize-css/bin/materialize.css'
 import 'materialize-css/bin/materialize.js'
-import './index.css';
+import './main.css';
 
 const store = createStore(rootReducer, applyMiddleware(ReduxPromise))
-store.dispatch(actions.fetchFeelings())
 
-console.log(store.getState())
+store.dispatch(actions.fetchFeelings())
 
 
 ReactDOM.render(

@@ -1,22 +1,29 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux'
 import NavBar from './components/nav_bar';
 import FeelingForm from './components/feeling_form'
-import PlantsList from './components/plants_list'
-
-import './App.css';
+import WelcomeMessage from './components/welcome_message'
+import Results from './components/results'
 
 class App extends Component {
   render() {
+
     return (
-      <div className="App">
+      <div id="App">
         <NavBar />
-        <p>How are you feeling?</p>
+        <WelcomeMessage />
         <br />
         <FeelingForm />
-        <PlantsList />
+        {this.props.currentFeeling.name ? <Results /> : null}
       </div>
     );
   }
 }
 
-export default App;
+function mapStateToProps(state){
+  return({
+    currentFeeling: state.currentFeeling
+  })
+}
+
+export default connect(mapStateToProps)(App)
