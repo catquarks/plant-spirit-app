@@ -1602,23 +1602,90 @@
   color: transparent !important; }
 
 body {
-  background: #b2ebf2;
+  background: url("images/leaf.jpg") #b2ebf2;
   margin-left: 10%;
   margin-right: 15%;
   margin-bottom: 15%;
-  font-family: 'Arsenal', sans-serif; }
+  font-family: 'Arsenal', sans-serif;
+  font-size: 1.5rem; }
 
-img {
-  /*max-width: 250px;*/
+#logo {
+  width: 50px;
   height: auto; }
+
+#App {
+  background: rgba(255, 255, 200, 0.1); }
+
+#welcome-message {
+  text-align: center; }
+
+form {
+  text-align: center; }
+
+input[type=text] {
+  width: 30em; }
+
+#results {
+  /*background: rgba(0, 0, 0, 0.3);*/
+  margin: auto; }
+
+#results h3 {
+  color: #e0f7fa;
+  text-shadow: 2px 3px #000;
+  padding: 10px; }
+
+.feeling-show {
+  height: auto;
+  color: #fafafa; }
+
+.feeling-show p {
+  font-size: 1em;
+  color: #e0f7fa;
+  margin-left: 15%;
+  margin-right: 10%;
+  background: rgba(0, 100, 100, 0.7);
+  padding: 20px; }
+
+.plant-show-container {
+  display: flex;
+  margin: auto;
+  flex-flow: row wrap;
+  justify-content: space-around; }
+
+.plant-show {
+  overflow: hidden;
+  width: 20em;
+  height: auto;
+  max-height: 30em;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fafafa; }
+
+.plant-show p {
+  overflow: auto;
+  background: rgba(0, 100, 100, 0.6);
+  padding: 10px;
+  height: 300px; }
+
+.plant-show h3 {
+  text-align: center;
+  font-size: 1.5em; }
+
+.feeling-show h3 {
+  text-align: center;
+  font-size: 1.5em; }
 
 nav ul a,
 nav .brand-logo {
   background: #0097a7;
-  color: #eee; }
+  color: #fafafa; }
 
 nav[role=navigation] {
-  background: #0097a7; }
+  background: #0097a7;
+  opacity: 0.75; }
+
+.link {
+  color: #42A5F5;
+  cursor: pointer; }
 
 .btn {
   background: #0097a7;
@@ -1628,7 +1695,7 @@ nav[role=navigation] {
   word-wrap: break-word;
   text-transform: capitalize;
   margin: 10px;
-  color: #eee; }
+  color: #fafafa; }
 
 .btn:active {
   background: red; }
@@ -1636,13 +1703,10 @@ nav[role=navigation] {
 .btn:hover {
   background: #00b8d4; }
 
-.crud {
-  background: #0097a7;
-  color: #eee; }
-
 p {
-  font-size: 1rem;
-  line-height: 2rem; }
+  font-size: 1em;
+  line-height: 2em;
+  color: #fafafa; }
 
 .button-collapse {
   color: #26a69a; }

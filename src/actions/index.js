@@ -1,5 +1,11 @@
 const baseUrl = 'api/v1'
 
+export function toggleAppMode(){
+	return({
+		type: 'TOGGLE_APP_MODE'
+	})
+}
+
 export function fetchPlants(query, type){
 	const plants = fetch(`${baseUrl}/plants?q=${query}&type=${type}`)
 		.then(response => {
@@ -12,6 +18,19 @@ export function fetchPlants(query, type){
 	return({
 		type: 'FETCH_PLANTS',
 		payload: plants
+	})
+}
+
+export function setCurrentFeeling(feeling){
+	return({
+		type: 'SET_CURRENT_FEELING',
+		payload: feeling
+	})
+}
+
+export function resetCurrentFeeling(feeling){
+	return({
+		type: 'RESET_CURRENT_FEELING'
 	})
 }
 
