@@ -8,8 +8,8 @@ import App from './App';
 import * as actions from './actions'
 
 import 'materialize-css/bin/materialize.css'
-import 'materialize-css/bin/materialize.js'
 import './main.css';
+import 'materialize-css/bin/materialize.js'
 
 const store = createStore(rootReducer, applyMiddleware(ReduxPromise))
 

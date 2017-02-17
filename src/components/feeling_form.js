@@ -49,7 +49,7 @@ class FeelingForm extends React.Component {
 
 	render(){
 		return(
-			<div id="feeling-form ">
+			<div id="feeling-form">
 	     	<form onSubmit={this.handleSubmit}>
 	        <input type="text" list="feelings" name="feeling" value={this.state.query} onChange={this.handleChange} />
 
