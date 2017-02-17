@@ -33,7 +33,7 @@ class FeelingForm extends React.Component {
 		if (result === undefined){
 			alert('Is there another way to describe your feeling?')
 		} else {
-			this.props.actions.fetchPlants(this.state.query)
+			this.props.actions.fetchPlants(this.state.query, this.props.appMode)
 		}
 	}
 
@@ -64,7 +64,8 @@ class FeelingForm extends React.Component {
 
 function mapStateToProps(state){
 	return({
-		feelings: state.feelings
+		feelings: state.feelings,
+		appMode: state.appMode
 	})
 }
 

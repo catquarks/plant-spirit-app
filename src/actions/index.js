@@ -1,7 +1,7 @@
 const baseUrl = 'api/v1'
 
-export function fetchPlants(query){
-	const plants = fetch(`${baseUrl}/plants?q=${query}`)
+export function fetchPlants(query, type){
+	const plants = fetch(`${baseUrl}/plants?q=${query}&type=${type}`)
 		.then(response => {
 			return response.json()
 		})
