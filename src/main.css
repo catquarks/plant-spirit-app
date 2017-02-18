@@ -1602,7 +1602,7 @@
   color: transparent !important; }
 
 body {
-  background: url("images/leaf.jpg") #b2ebf2;
+  background: url("images/leaf.jpg") fixed #b2ebf2;
   margin-bottom: 15%;
   font-family: 'Arsenal', sans-serif;
   font-size: 1.5rem; }
@@ -1623,8 +1623,10 @@ div[class$=-show] p {
   border-radius: 2em 2em; }
 
 /* NAV BAR COMPONENT */
-.navbar-fixed {
-  background: #001027; }
+#navbar {
+  /*background: #001027;*/
+  /*  position: fixed;
+  margin-top: 0;*/ }
 
 nav {
   margin: auto;
@@ -1670,6 +1672,10 @@ nav {
   margin: auto;
   width: 30em;
   text-align: center; }
+
+input[type=text] {
+  color: #fafafa;
+  font-size: 2em; }
 
 .btn {
   background: #006464;

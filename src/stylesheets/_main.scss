@@ -13,7 +13,7 @@ $button-color: rgba(0, 100, 100, 1) !default;
 
 
 body {
-  background: url('images/leaf.jpg') $background-color;
+  background: url('images/leaf.jpg') fixed $background-color;
   margin-bottom: 15%;
   font-family: 'Arsenal', sans-serif;
   font-size: 1.5rem;
@@ -39,10 +39,14 @@ div[class$=-show] p {
 }
 
 
+
+
 /* NAV BAR COMPONENT */
 
-.navbar-fixed {
-  background: #001027;
+#navbar {
+  /*background: #001027;*/
+/*  position: fixed;
+  margin-top: 0;*/
 }
 
 nav {
@@ -68,6 +72,8 @@ nav {
 .button-collapse {
   color: #26a69a;
 }
+
+
 
 /* WELCOME MESSAGE COMPONENT */
 
@@ -100,6 +106,11 @@ nav {
   margin: auto;
   width: 30em;
   text-align: center;
+}
+
+input[type=text] {
+  color: $text-color;
+  font-size: 2em;
 }
 
 .btn {
