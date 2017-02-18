@@ -8,8 +8,6 @@ export default function() {
 		    <div className="nav-wrapper">
 		      <a href="#!" className="brand-logo center">
 		      	Plant Spirit App
-		      	<img src="sun.png" id="logo" />
-		      	<i className="material-icons">star</i>
 	      	</a>
 		      <a href="#" data-activates="collapsible" className="button-collapse"><i className="material-icons">menu</i></a>
 		      <ul className="right hide-on-med-and-down">

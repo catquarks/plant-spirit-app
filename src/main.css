@@ -1605,15 +1605,16 @@ body {
   background: url("images/leaf.jpg") fixed #b2ebf2;
   margin-bottom: 15%;
   font-family: 'Arsenal', sans-serif;
-  font-size: 1.5rem; }
+  font-size: 1.75rem; }
 
 p {
   font-size: 1em;
   line-height: 2em;
-  color: #fafafa; }
+  color: #fcfcfc; }
 
-div[class$=-show] p {
-  border-radius: 2em 2em; }
+div[class$=show] p {
+  border-radius: 2em 2em;
+  background: rgba(0, 100, 100, 0.85); }
 
 #app-body {
   margin-top: 3em;
@@ -1655,13 +1656,15 @@ nav {
 
 #welcome-message p {
   border-radius: 2em 2em;
-  background: rgba(0, 100, 100, 0.7);
+  /*  background: rgba(0, 100, 100, 0.85);
+*/
   width: 25em;
   padding: 20px;
-  margin: auto; }
+  margin: auto;
+  text-shadow: 2px 1px #000; }
 
 #welcome-message span.link {
-  color: #42A5F5;
+  color: #64B5F6;
   cursor: pointer; }
 
 #welcome-message span.link:hover {
@@ -1674,7 +1677,7 @@ nav {
   text-align: center; }
 
 input[type=text] {
-  color: #fafafa;
+  color: #fcfcfc;
   font-size: 2em; }
 
 .btn {
@@ -1685,14 +1688,13 @@ input[type=text] {
   word-wrap: break-word;
   text-transform: capitalize;
   margin: 10px;
-  color: #fafafa; }
+  color: #fcfcfc; }
 
 .btn:hover {
   background: #0097a7; }
 
 /* RESULTS COMPONENT */
 #results {
-  /*background: rgba(0, 0, 0, 0.3);*/
   margin: auto; }
 
 #results h3 {
@@ -1703,7 +1705,7 @@ input[type=text] {
 .feeling-show {
   margin: auto;
   height: auto;
-  color: #fafafa;
+  color: #fcfcfc;
   background: rgba(0, 10, 27, 0.6);
   width: 30em;
   border-radius: 1em 3em; }
@@ -1713,7 +1715,7 @@ input[type=text] {
   color: #e0f7fa;
   margin-left: 15%;
   margin-right: 10%;
-  background: rgba(0, 100, 100, 0.7);
+  background: rgba(0, 100, 100, 0.85);
   padding: 20px; }
 
 .plant-show-container {
@@ -1729,11 +1731,11 @@ input[type=text] {
   height: auto;
   max-height: 30em;
   background: rgba(0, 10, 27, 0.6);
-  color: #fafafa; }
+  color: #fcfcfc; }
 
 .plant-show p {
   overflow: auto;
-  background: rgba(0, 100, 100, 0.6);
+  background: rgba(0, 100, 100, 0.85);
   padding: 10px;
   height: 300px; }
 
