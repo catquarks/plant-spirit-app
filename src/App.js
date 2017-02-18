@@ -10,14 +10,14 @@ import 'materialize-css/bin/materialize.css'
 
 
 class App extends Component {
-  componentDidMount(){
-    document.addEventListener("DOMContentLoaded", function(e){
-      setTimeout(function(){
-        document.getElementsByClassName('button-collapse')[0].sideNav();
+  // componentDidMount(){
+  //   document.addEventListener("DOMContentLoaded", function(e){
+  //     setTimeout(function(){
+  //       document.getElementsByClassName('button-collapse')[0].sideNav();
 
-      }, 500)     
-    })
-  }
+  //     }, 500)     
+  //   })
+  // }
 
   render() {
 
