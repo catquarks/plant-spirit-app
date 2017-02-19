@@ -1628,9 +1628,7 @@ p {
 
 /* NAV BAR COMPONENT */
 .navbar-fixed {
-  height: 4em;
-  margin-left: 1em;
-  margin-right: 1em; }
+  height: 4em; }
   .navbar-fixed nav {
     background: rgba(0, 10, 27, 0.8);
     margin: auto;
