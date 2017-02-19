@@ -1614,7 +1614,7 @@ p {
 
 /* NAV BAR COMPONENT */
 .navbar-fixed {
-  height: 4em; }
+  height: 2em; }
   .navbar-fixed nav {
     margin: auto;
     border-radius: 4em 4em 4em 4em;
