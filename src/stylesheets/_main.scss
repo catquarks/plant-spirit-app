@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css?family=Arsenal');
-
 @import "materialize-css/sass/components/_color.scss";
 
 
@@ -28,12 +27,6 @@ p {
   font-size: 1em;
   line-height: 2em;
   color: $text-color;
-}
-
-div[class$=show] p {
-  border-radius: 2em 2em;
-  background: rgba(0, 100, 100, 0.85);
-
 }
 
 #app-body {
@@ -77,17 +70,16 @@ nav {
   width: 95%;
   height: 4em;
 
-}
+  .nav-wrapper {
+    padding: 1em;
 
-.nav-wrapper ul li a {
-  color: $nav-color;
-}
-.nav-wrapper ul li a:hover {
-  color: $nav-hover-color;
-}
-
-.nav-wrapper {
-  padding: 1em;
+    ul li a {
+      color: $nav-color;
+      &:hover {
+        color: $nav-hover-color;
+      }
+    }
+  }
 }
 
 
@@ -97,37 +89,38 @@ nav {
   padding: 20px;
   margin: 20px;
   text-align: center;
+
+  p {
+    border-radius: 2em 2em;
+    background: $primary-color;
+    width: 25em;
+    padding: 20px;
+    margin: auto;
+    text-shadow: 2px 1px #000;
+  }
+
+  span.link {
+    color: $link-color;
+    cursor: pointer;
+    &:hover {
+      color: #eee;
+    }
+  }
 }
 
-#welcome-message p {
-  border-radius: 2em 2em;
-  background: $primary-color;
-  width: 25em;
-  padding: 20px;
-  margin: auto;
-  text-shadow: 2px 1px #000;
-}
-
-#welcome-message span.link {
-  color: $link-color;
-  cursor: pointer;
-}
-
-#welcome-message span.link:hover {
-  color: #eee;
-}
 
 /* RESULTS COMPONENT */
 
 #results {
   margin: auto;
+
+  h3 {
+    color: $small-title;
+    text-shadow: 2px 3px #000;
+    padding: 10px;
+  }
 }
 
-#results h3 {
-  color: $small-title;
-  text-shadow: 2px 3px #000;
-  padding: 10px;
-}
 
 /* FEELING FORM COMPONENT */
 
@@ -135,16 +128,16 @@ nav {
   margin: auto;
   width: 30em;
   text-align: center;
-}
 
-input[type=text] {
-  color: $text-color;
-  font-size: 2em;
-}
+  input[type=text] {
+    color: $text-color;
+    font-size: 2em;
 
-input[type=text]:focus {
- border-bottom: 1px solid #000;
- box-shadow: 0 1px 0 0 #000;
+    &:focus {
+     border-bottom: 1px solid $secondary-color;
+     box-shadow: 0 1px 0 0 $primary-color;
+    }
+  }
 }
 
 .btn {
@@ -156,11 +149,12 @@ input[type=text]:focus {
   text-transform: capitalize;
   margin: 10px;
   color: $text-color;
+
+  &:hover {
+    background: $primary-color;
+  }
 }
 
-.btn:hover {
-  background: $primary-color;
-}
 
 /* FEELING SHOW COMPONENT */
 
@@ -171,21 +165,21 @@ input[type=text]:focus {
   background: $tertiary-color;
   width: 30em;
   border-radius: 1em 3em;
-}
 
-.feeling-show h3 {
-  text-align: center;
-  font-size: 1.5em;
-}
+  h3 {
+    text-align: center;
+    font-size: 1.5em;
+  }
 
-.feeling-show p {
-  font-size: 1em;
-  color: $small-title;
-  margin-left: 15%;
-  margin-right: 10%;
-  background: $primary-color;
-  padding: 20px;  
-  border-radius: 2em 2em;
+  p {
+    font-size: 1em;
+    color: $small-title;
+    margin-left: 15%;
+    margin-right: 10%;
+    background: $primary-color;
+    padding: 20px;  
+    border-radius: 2em 2em;
+  }
 }
 
 
@@ -196,27 +190,27 @@ input[type=text]:focus {
   margin: auto;
   flex-flow: row wrap;
   justify-content: space-around;
-}
 
-.plant-show {
-  border-radius: 1em 3em;
-  overflow: hidden;
-  width: 20em;
-  height: auto;
-  max-height: 30em;
-  background: $tertiary-color;
-  color: $text-color;
-}
+  .plant-show {
+    border-radius: 1em 3em;
+    overflow: hidden;
+    width: 20em;
+    height: auto;
+    max-height: 30em;
+    background: $tertiary-color;
+    color: $text-color;
 
-.plant-show h3 {
-  text-align: center;
-  font-size: 1.5em;
-}
+    h3 {
+      text-align: center;
+      font-size: 1.5em;
+    }
 
-.plant-show p {
-  overflow: auto;
-  background: $primary-color;
-  padding: 10px;
-  height: 300px;
+    p {
+      overflow: auto;
+      background: $primary-color;
+      padding: 10px;
+      height: 300px;
+    }
+  }
 }
 
