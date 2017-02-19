@@ -1617,11 +1617,18 @@ div[class$=show] p {
   background: rgba(0, 100, 100, 0.85); }
 
 #app-body {
-  margin-top: 3em;
-  margin-left: 3em;
-  margin-right: 3em;
+  margin-top: 2em;
+  margin-left: 2em;
+  margin-right: 2em;
   background: rgba(255, 255, 200, 0.2);
   border-radius: 2em 2em; }
+
+@media only screen and (max-width: 900px) {
+  body {
+    font-size: 3vw; }
+  #app-body {
+    margin-left: 5%;
+    margin-right: 5%; } }
 
 /* NAV BAR COMPONENT */
 #navbar {

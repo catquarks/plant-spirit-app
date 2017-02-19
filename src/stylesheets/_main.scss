@@ -33,11 +33,23 @@ div[class$=show] p {
 }
 
 #app-body {
-  margin-top: 3em;
-	margin-left: 3em;
-	margin-right: 3em;
+  margin-top: 2em;
+	margin-left: 2em;
+	margin-right: 2em;
   background: rgba(256, 256, 200, 0.2);
   border-radius: 2em 2em;
+}
+
+@media only screen and (max-width : 900px) {
+  body {
+    font-size: 3vw;
+  }
+  #app-body {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+
 }
 
 
