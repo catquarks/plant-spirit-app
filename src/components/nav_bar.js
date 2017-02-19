@@ -1,14 +1,24 @@
 import React from 'react'
 
-export default function (){
+export default function() {
+
 	return(
-		<div>
-	    <nav role="navigation">
-		    <div className="nav-wrapper container">
-		      <a href="#"><img src="sun.png" id="logo" /></a>
-		      <a id="logo-container" href="#" className="brand-logo">Plant Spirit App</a>
+		<div className="navbar-fixed">
+		  <nav>
+		    <div className="nav-wrapper">
+		      <a href="#!" className="brand-logo left">
+		      	Plant Spirit App
+	      	</a>
+		      <ul className="right">
+		        <li><a href="#" className="waves-effect waves-light">How to Use This App</a></li>
+		        <li><a href="#" className="waves-effect waves-light">About Béthany</a></li>
+		        <li><a href="http://www.oluminousbeing.com/" target="_blank" className="waves-effect waves-light">O Luminous Being</a></li>
+		      </ul>
 		    </div>
-		  </nav> 	
-		</div>
+		  </nav>
+	  </div>
+
 	)
+
 }
+

@@ -4,17 +4,37 @@ import NavBar from './components/nav_bar';
 import FeelingForm from './components/feeling_form'
 import WelcomeMessage from './components/welcome_message'
 import Results from './components/results'
+import $ from 'jquery'
+import 'materialize-css/bin/materialize.js'
+import 'materialize-css/bin/materialize.css'
+
+
 
 class App extends Component {
+  componentDidMount(){
+    // document.addEventListener("DOMContentLoaded", function(e){
+    //   setTimeout(function(){
+    //     document.getElementsByClassName('button-collapse')[0].sideNav();
+    //   }, 500)     
+    // })
+    $( document ).ready(function(){
+      
+      $(".button-collapse").sideNav();
+    })
+
+  }
+
   render() {
 
     return (
-      <div id="App">
+      <div id="app">
         <NavBar />
-        <WelcomeMessage />
-        <br />
-        <FeelingForm />
-        {this.props.currentFeeling.name ? <Results /> : null}
+        <div id="app-body">
+          <WelcomeMessage />
+          <br />
+          <FeelingForm />
+          {this.props.currentFeeling.name ? <Results /> : null}
+        </div>
       </div>
     );
   }
