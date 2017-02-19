@@ -2,11 +2,15 @@
 
 @import "materialize-css/sass/components/_color.scss";
 
+
 $background-color: color("cyan", "lighten-4") !default;
-$primary-color: color("cyan", "darken-2") !default;
+$primary-color: rgba(0, 100, 100, 0.85);
 $secondary-color: color("cyan", "accent-4") !default;
+$tertiary-color: rgba(0, 10, 27, 0.6) !default;
 $text-color: #fcfcfc;
 $link-color: color("blue", "lighten-2") !default;
+$nav-color: rgba(140, 200, 110, 1) !default;
+$nav-hover-color: rgba(256, 256, 200, 1) !default;
 $small-title: color("cyan", "lighten-5") !default;
 $results-bg: color("cyan", "lighten-3") !default;
 $button-color: rgba(0, 100, 100, 1) !default;
@@ -33,10 +37,11 @@ div[class$=show] p {
 }
 
 #app-body {
+  $background-color: rgba(256, 256, 200, 0.2);
   margin-top: 2em;
 	margin-left: 2em;
 	margin-right: 2em;
-  background: rgba(256, 256, 200, 0.2);
+  background: $background-color;
   border-radius: 2em 2em;
 }
 
@@ -64,29 +69,26 @@ div[class$=show] p {
 }
 
 nav {
+  $background-color: #001027;
   margin: auto;
-  background: #001027;
   border-radius: 4em 4em 4em 4em;
-  background: #001027;
+  background: $background-color;
   opacity: 0.75;
   width: 95%;
   height: 4em;
 
 }
 
-#logo {
-  width: 1em;
-  height: auto;
+.nav-wrapper ul li a {
+  color: $nav-color;
+}
+.nav-wrapper ul li a:hover {
+  color: $nav-hover-color;
 }
 
 .nav-wrapper {
   padding: 1em;
 }
-
-.button-collapse {
-  color: #26a69a;
-}
-
 
 
 /* WELCOME MESSAGE COMPONENT */
@@ -99,7 +101,7 @@ nav {
 
 #welcome-message p {
   border-radius: 2em 2em;
-  background: rgba(0, 100, 100, 0.85);
+  background: $primary-color;
   width: 25em;
   padding: 20px;
   margin: auto;
@@ -115,6 +117,18 @@ nav {
   color: #eee;
 }
 
+/* RESULTS COMPONENT */
+
+#results {
+  margin: auto;
+}
+
+#results h3 {
+  color: $small-title;
+  text-shadow: 2px 3px #000;
+  padding: 10px;
+}
+
 /* FEELING FORM COMPONENT */
 
 #feeling-form {
@@ -126,6 +140,11 @@ nav {
 input[type=text] {
   color: $text-color;
   font-size: 2em;
+}
+
+input[type=text]:focus {
+ border-bottom: 1px solid #000;
+ box-shadow: 0 1px 0 0 #000;
 }
 
 .btn {
@@ -143,36 +162,34 @@ input[type=text] {
   background: $primary-color;
 }
 
-/* RESULTS COMPONENT */
-
-#results {
-  margin: auto;
-}
-
-#results h3 {
-  color: $small-title;
-  text-shadow: 2px 3px #000;
-  padding: 10px;
-}
+/* FEELING SHOW COMPONENT */
 
 .feeling-show {
   margin: auto;
   height: auto;
   color: $text-color;
-  background: rgba(0, 10, 27, 0.6);
+  background: $tertiary-color;
   width: 30em;
   border-radius: 1em 3em;
 }
 
+.feeling-show h3 {
+  text-align: center;
+  font-size: 1.5em;
+}
 
 .feeling-show p {
   font-size: 1em;
   color: $small-title;
   margin-left: 15%;
   margin-right: 10%;
-  background: rgba(0, 100, 100, 0.85);
+  background: $primary-color;
   padding: 20px;  
+  border-radius: 2em 2em;
 }
+
+
+/* PLANT SHOW COMPONENT */
 
 .plant-show-container {
   display: flex;
@@ -187,15 +204,8 @@ input[type=text] {
   width: 20em;
   height: auto;
   max-height: 30em;
-  background: rgba(0, 10, 27, 0.6);
+  background: $tertiary-color;
   color: $text-color;
-}
-
-.plant-show p {
-  overflow: auto;
-  background: rgba(0, 100, 100, 0.85);
-  padding: 10px;
-  height: 300px;
 }
 
 .plant-show h3 {
@@ -203,44 +213,10 @@ input[type=text] {
   font-size: 1.5em;
 }
 
-
-.feeling-show h3 {
-  text-align: center;
-  font-size: 1.5em;
+.plant-show p {
+  overflow: auto;
+  background: $primary-color;
+  padding: 10px;
+  height: 300px;
 }
 
-
-
-
-
-
-/*
-
-@media only screen and (max-width : 992px) {
-  .parallax-container .section {
-    position: absolute;
-    top: 40%;
-  }
-  #index-banner .section {
-    top: 10%;
-  }
-}
-
-@media only screen and (max-width : 600px) {
-  #index-banner .section {
-    top: 0;
-  }
-}
-
-.icon-block {
-  padding: 0 15px;
-}
-.icon-block .material-icons {
-  font-size: inherit;
-}
-
-footer.page-footer {
-  margin: 0;
-}
-
-*/

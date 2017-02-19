@@ -1638,22 +1638,20 @@ div[class$=show] p {
 
 nav {
   margin: auto;
-  background: #001027;
   border-radius: 4em 4em 4em 4em;
   background: #001027;
   opacity: 0.75;
   width: 95%;
   height: 4em; }
 
-#logo {
-  width: 1em;
-  height: auto; }
+.nav-wrapper ul li a {
+  color: #8cc86e; }
+
+.nav-wrapper ul li a:hover {
+  color: #ffffc8; }
 
 .nav-wrapper {
   padding: 1em; }
-
-.button-collapse {
-  color: #26a69a; }
 
 /* WELCOME MESSAGE COMPONENT */
 #welcome-message {
@@ -1676,6 +1674,15 @@ nav {
 #welcome-message span.link:hover {
   color: #eee; }
 
+/* RESULTS COMPONENT */
+#results {
+  margin: auto; }
+
+#results h3 {
+  color: #e0f7fa;
+  text-shadow: 2px 3px #000;
+  padding: 10px; }
+
 /* FEELING FORM COMPONENT */
 #feeling-form {
   margin: auto;
@@ -1685,6 +1692,10 @@ nav {
 input[type=text] {
   color: #fcfcfc;
   font-size: 2em; }
+
+input[type=text]:focus {
+  border-bottom: 1px solid #000;
+  box-shadow: 0 1px 0 0 #000; }
 
 .btn {
   background: #006464;
@@ -1697,17 +1708,9 @@ input[type=text] {
   color: #fcfcfc; }
 
 .btn:hover {
-  background: #0097a7; }
+  background: rgba(0, 100, 100, 0.85); }
 
-/* RESULTS COMPONENT */
-#results {
-  margin: auto; }
-
-#results h3 {
-  color: #e0f7fa;
-  text-shadow: 2px 3px #000;
-  padding: 10px; }
-
+/* FEELING SHOW COMPONENT */
 .feeling-show {
   margin: auto;
   height: auto;
@@ -1716,14 +1719,20 @@ input[type=text] {
   width: 30em;
   border-radius: 1em 3em; }
 
+.feeling-show h3 {
+  text-align: center;
+  font-size: 1.5em; }
+
 .feeling-show p {
   font-size: 1em;
   color: #e0f7fa;
   margin-left: 15%;
   margin-right: 10%;
   background: rgba(0, 100, 100, 0.85);
-  padding: 20px; }
+  padding: 20px;
+  border-radius: 2em 2em; }
 
+/* PLANT SHOW COMPONENT */
 .plant-show-container {
   display: flex;
   margin: auto;
@@ -1739,47 +1748,12 @@ input[type=text] {
   background: rgba(0, 10, 27, 0.6);
   color: #fcfcfc; }
 
+.plant-show h3 {
+  text-align: center;
+  font-size: 1.5em; }
+
 .plant-show p {
   overflow: auto;
   background: rgba(0, 100, 100, 0.85);
   padding: 10px;
   height: 300px; }
-
-.plant-show h3 {
-  text-align: center;
-  font-size: 1.5em; }
-
-.feeling-show h3 {
-  text-align: center;
-  font-size: 1.5em; }
-
-/*
-
-@media only screen and (max-width : 992px) {
-  .parallax-container .section {
-    position: absolute;
-    top: 40%;
-  }
-  #index-banner .section {
-    top: 10%;
-  }
-}
-
-@media only screen and (max-width : 600px) {
-  #index-banner .section {
-    top: 0;
-  }
-}
-
-.icon-block {
-  padding: 0 15px;
-}
-.icon-block .material-icons {
-  font-size: inherit;
-}
-
-footer.page-footer {
-  margin: 0;
-}
-
-*/
