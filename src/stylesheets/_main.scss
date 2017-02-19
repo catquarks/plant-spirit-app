@@ -34,15 +34,13 @@ p {
 
 .navbar-fixed {
   height: 4em;
-  margin-left: 1em;
-  margin-right: 1em;
+
   nav {
     $background-color: #001027;
     margin: auto;
     border-radius: 4em 4em 4em 4em;
     background: $background-color;
     opacity: 0.85;
-    width: 95%;
 
     .nav-wrapper {
       padding-left: 1em;
@@ -75,11 +73,7 @@ p {
     margin-left: 5%;
     margin-right: 5%;
   }
-
-
 }
-
-
 
 
 /* WELCOME MESSAGE COMPONENT */
