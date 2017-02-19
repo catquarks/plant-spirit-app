@@ -1612,6 +1612,25 @@ p {
   line-height: 2em;
   color: #fcfcfc; }
 
+/* NAV BAR COMPONENT */
+.navbar-fixed {
+  height: 4em;
+  margin-left: 1em;
+  margin-right: 1em; }
+  .navbar-fixed nav {
+    margin: auto;
+    border-radius: 4em 4em 4em 4em;
+    background: #001027;
+    opacity: 0.85;
+    width: 95%; }
+    .navbar-fixed nav .nav-wrapper {
+      padding-left: 1em;
+      padding-right: 1em; }
+      .navbar-fixed nav .nav-wrapper ul li a {
+        color: #8cc86e; }
+        .navbar-fixed nav .nav-wrapper ul li a:hover {
+          color: #ffffc8; }
+
 #app-body {
   margin-top: 2em;
   margin-left: 2em;
@@ -1625,26 +1644,6 @@ p {
   #app-body {
     margin-left: 5%;
     margin-right: 5%; } }
-
-/* NAV BAR COMPONENT */
-#navbar {
-  /*background: #001027;*/
-  /*  position: fixed;
-  margin-top: 0;*/ }
-
-nav {
-  margin: auto;
-  border-radius: 4em 4em 4em 4em;
-  background: #001027;
-  opacity: 0.75;
-  width: 95%;
-  height: 4em; }
-  nav .nav-wrapper {
-    padding: 1em; }
-    nav .nav-wrapper ul li a {
-      color: #8cc86e; }
-      nav .nav-wrapper ul li a:hover {
-        color: #ffffc8; }
 
 /* WELCOME MESSAGE COMPONENT */
 #welcome-message {

@@ -3,7 +3,7 @@ import React from 'react'
 export default function() {
 
 	return(
-
+		<div className="navbar-fixed">
 		  <nav>
 		    <div className="nav-wrapper">
 		      <a href="#!" className="brand-logo left">
@@ -17,7 +17,7 @@ export default function() {
 		      </ul>
 		    </div>
 		  </nav>
-
+	  </div>
 
 	)
 

@@ -29,11 +29,40 @@ p {
   color: $text-color;
 }
 
+
+/* NAV BAR COMPONENT */
+
+.navbar-fixed {
+  height: 4em;
+  margin-left: 1em;
+  margin-right: 1em;
+  nav {
+    $background-color: #001027;
+    margin: auto;
+    border-radius: 4em 4em 4em 4em;
+    background: $background-color;
+    opacity: 0.85;
+    width: 95%;
+
+    .nav-wrapper {
+      padding-left: 1em;
+      padding-right: 1em;
+      ul li a {
+        color: $nav-color;
+        &:hover {
+          color: $nav-hover-color;
+        }
+      }
+    }
+  }
+}
+
+
 #app-body {
   $background-color: rgba(256, 256, 200, 0.2);
   margin-top: 2em;
-	margin-left: 2em;
-	margin-right: 2em;
+  margin-left: 2em;
+  margin-right: 2em;
   background: $background-color;
   border-radius: 2em 2em;
 }
@@ -51,36 +80,6 @@ p {
 }
 
 
-
-
-/* NAV BAR COMPONENT */
-
-#navbar {
-  /*background: #001027;*/
-/*  position: fixed;
-  margin-top: 0;*/
-}
-
-nav {
-  $background-color: #001027;
-  margin: auto;
-  border-radius: 4em 4em 4em 4em;
-  background: $background-color;
-  opacity: 0.75;
-  width: 95%;
-  height: 4em;
-
-  .nav-wrapper {
-    padding: 1em;
-
-    ul li a {
-      color: $nav-color;
-      &:hover {
-        color: $nav-hover-color;
-      }
-    }
-  }
-}
 
 
 /* WELCOME MESSAGE COMPONENT */
