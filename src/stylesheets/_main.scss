@@ -2,16 +2,18 @@
 
 @import "materialize-css/sass/components/_color.scss";
 
-$background-color: rgba(0, 10, 27, 0.8) !default;
-$primary-color: rgba(0, 30, 70, 0.85) !default;
-$secondary-color: rgba(0, 10, 27, 0.6) !default;
+$background-color: rgba(0, 10, 27, 0.8);
+$primary-color: rgba(0, 30, 70, 0.85);
+$secondary-color: rgba(0, 10, 27, 0.6);
 $tertiary-color: rgba(0, 10, 27, 0.6) !default;
 $text-color: #fcfcfc !default;
 $link-color: color("blue", "lighten-2") !default;
 $nav-color: rgba(256, 256, 180, 1) !default;
-$hover-color: rgba(256, 256, 0, 1) !default;
-$small-title: rgba(230, 230, 230, 1) !default;
-$button-color: rgba(50, 70, 120, 1) !default;
+$nav-hover-color: rgba(256, 256, 0, 1) !default;
+
+$small-title: rgba(230, 230, 230, 1);
+
+$button-color: rgba(50, 70, 120, 1);
 
 
 body {
@@ -29,10 +31,11 @@ p {
 }
 
 #app-body {
+  $background-color: rgba(256, 256, 200, 0.05);
   margin-top: 2em;
 	margin-left: 2em;
 	margin-right: 2em;
-  background: rgba(256, 256, 200, 0.05);
+  background: $background-color;
   border-radius: 2em 2em;
 }
 
@@ -66,24 +69,16 @@ nav {
 
 }
 
-#logo {
-  width: 1em;
-  height: auto;
-}
-
 .nav-wrapper {
   padding: 1em;
 }
 
-.button-collapse {
-  color: #26a69a;
-}
 
 .nav-wrapper ul li a {
   color: $nav-color;
 }
 .nav-wrapper ul li a:hover {
-  color: $hover-color;
+  color: $nav-hover-color;
 }
 
 
@@ -113,6 +108,20 @@ nav {
   color: #eee;
 }
 
+
+/* RESULTS COMPONENT */
+
+#results {
+  margin: auto;
+}
+
+#results h3 {
+  color: $small-title;
+  text-shadow: 2px 3px #000;
+  padding: 10px;
+}
+
+
 /* FEELING FORM COMPONENT */
 
 #feeling-form {
@@ -127,9 +136,8 @@ input[type=text] {
 }
 
 input[type=text]:focus {
-  box-shadow: none;
-  border: none; 
-  text-decoration: none;
+ border-bottom: 1px solid #000;
+ box-shadow: 0 1px 0 0 #000;
 }
 
 .btn {
@@ -147,17 +155,6 @@ input[type=text]:focus {
   background: $primary-color;
 }
 
-/* RESULTS COMPONENT */
-
-#results {
-  margin: auto;
-}
-
-#results h3 {
-  color: $small-title;
-  text-shadow: 2px 3px #000;
-  padding: 10px;
-}
 
 /* FEELING SHOW COMPONENT */
 
@@ -209,7 +206,6 @@ input[type=text]:focus {
   text-align: center;
   font-size: 1.5em;
 }
-
 
 .plant-show p {
   overflow: auto;
