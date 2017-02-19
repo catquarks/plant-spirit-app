@@ -3,16 +3,14 @@
 @import "materialize-css/sass/components/_color.scss";
 
 $background-color: rgba(0, 10, 27, 0.8);
-$primary-color: rgba(0, 30, 70, 0.85);
-$secondary-color: rgba(0, 10, 27, 0.6);
+$primary-color: rgba(0, 30, 70, 0.85) !default;
+$secondary-color: rgba(0, 10, 27, 0.6) !default;
 $tertiary-color: rgba(0, 10, 27, 0.6) !default;
 $text-color: #fcfcfc !default;
 $link-color: color("blue", "lighten-2") !default;
 $nav-color: rgba(256, 256, 180, 1) !default;
 $nav-hover-color: rgba(256, 256, 0, 1) !default;
-
 $small-title: rgba(230, 230, 230, 1);
-
 $button-color: rgba(50, 70, 120, 1);
 
 
@@ -50,35 +48,30 @@ p {
 }
 
 
-
 /* NAV BAR COMPONENT */
 
-#navbar {
-  /*background: #001027;*/
-/*  position: fixed;
-  margin-top: 0;*/
-}
-
-nav {
-  margin: auto;
-  background: #001027;
-  border-radius: 4em 4em 4em 4em;
-  background: $background-color;
-  width: 95%;
+.navbar-fixed {
   height: 4em;
+  margin-left: 1em;
+  margin-right: 1em;
+  
+  nav {
+    background: $background-color;
+    margin: auto;
+    border-radius: 4em 4em 4em 4em;
+    opacity: 0.85;
 
-}
-
-.nav-wrapper {
-  padding: 1em;
-}
-
-
-.nav-wrapper ul li a {
-  color: $nav-color;
-}
-.nav-wrapper ul li a:hover {
-  color: $nav-hover-color;
+    .nav-wrapper {
+      padding-left: 1em;
+      padding-right: 1em;
+      ul li a {
+        color: $nav-color;
+        &:hover {
+          color: $nav-hover-color;
+        }
+      }
+    }
+  }
 }
 
 
@@ -88,24 +81,24 @@ nav {
   padding: 20px;
   margin: 20px;
   text-align: center;
-}
 
-#welcome-message p {
-  border-radius: 2em 2em;
-  background: $primary-color;
-  width: 25em;
-  padding: 20px;
-  margin: auto;
-  text-shadow: 2px 1px #000;
-}
+  p {
+    border-radius: 2em 2em;
+    background: $primary-color;
+    width: 25em;
+    padding: 20px;
+    margin: auto;
+    text-shadow: 2px 1px #000;
+  }
 
-#welcome-message span.link {
-  color: $link-color;
-  cursor: pointer;
-}
+  span.link {
+    color: $link-color;
+    cursor: pointer;
 
-#welcome-message span.link:hover {
-  color: #eee;
+    &:hover {
+      color: #eee;
+    }
+  }
 }
 
 
@@ -113,13 +106,14 @@ nav {
 
 #results {
   margin: auto;
+
+  h3 {
+    color: $small-title;
+    text-shadow: 2px 3px #000;
+    padding: 10px;
+  }
 }
 
-#results h3 {
-  color: $small-title;
-  text-shadow: 2px 3px #000;
-  padding: 10px;
-}
 
 
 /* FEELING FORM COMPONENT */
@@ -128,17 +122,18 @@ nav {
   margin: auto;
   width: 30em;
   text-align: center;
+
+  input[type=text] {
+    color: $text-color;
+    font-size: 2em;
+
+    &:focus {
+     border-bottom: 1px solid $secondary-color;
+     box-shadow: 0 1px 0 0 $primary-color;
+    }
+  }
 }
 
-input[type=text] {
-  color: $text-color;
-  font-size: 2em;
-}
-
-input[type=text]:focus {
- border-bottom: 1px solid #000;
- box-shadow: 0 1px 0 0 #000;
-}
 
 .btn {
   background: $button-color;
@@ -149,10 +144,10 @@ input[type=text]:focus {
   text-transform: capitalize;
   margin: 10px;
   color: $text-color;
-}
 
-.btn:hover {
-  background: $primary-color;
+  &:hover {
+    background: $primary-color;
+  }
 }
 
 
@@ -165,21 +160,21 @@ input[type=text]:focus {
   background: $tertiary-color;
   width: 30em;
   border-radius: 1em 3em;
-}
 
-.feeling-show h3 {
-  text-align: center;
-  font-size: 1.5em;
-}
+  h3 {
+    text-align: center;
+    font-size: 1.5em;
+  }
 
-.feeling-show p {
-  font-size: 1em;
-  color: $small-title;
-  margin-left: 15%;
-  margin-right: 10%;
-  background: $primary-color;
-  padding: 20px;  
-  border-radius: 2em 2em;
+  p {
+    font-size: 1em;
+    color: $small-title;
+    margin-left: 15%;
+    margin-right: 10%;
+    background: $primary-color;
+    padding: 20px;  
+    border-radius: 2em 2em;
+  }
 }
 
 
@@ -190,28 +185,28 @@ input[type=text]:focus {
   margin: auto;
   flex-flow: row wrap;
   justify-content: space-around;
-}
 
-.plant-show {
-  border-radius: 1em 3em;
-  overflow: hidden;
-  width: 20em;
-  height: auto;
-  max-height: 30em;
-  background: $tertiary-color;
-  color: $text-color;
-}
+  .plant-show {
+    border-radius: 1em 3em;
+    overflow: hidden;
+    width: 20em;
+    height: auto;
+    max-height: 30em;
+    background: $tertiary-color;
+    color: $text-color;
 
-.plant-show h3 {
-  text-align: center;
-  font-size: 1.5em;
-}
+    h3 {
+      text-align: center;
+      font-size: 1.5em;
+    }
 
-.plant-show p {
-  overflow: auto;
-  background: $primary-color;
-  padding: 10px;
-  height: 300px;
+    p {
+      overflow: auto;
+      background: $primary-color;
+      padding: 10px;
+      height: 300px;
+    }
+  }  
 }
 
 

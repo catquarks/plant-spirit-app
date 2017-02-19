@@ -1627,71 +1627,60 @@ p {
     margin-right: 5%; } }
 
 /* NAV BAR COMPONENT */
-#navbar {
-  /*background: #001027;*/
-  /*  position: fixed;
-  margin-top: 0;*/ }
-
-nav {
-  margin: auto;
-  background: #001027;
-  border-radius: 4em 4em 4em 4em;
-  background: rgba(0, 10, 27, 0.8);
-  width: 95%;
-  height: 4em; }
-
-.nav-wrapper {
-  padding: 1em; }
-
-.nav-wrapper ul li a {
-  color: #ffffb4; }
-
-.nav-wrapper ul li a:hover {
-  color: yellow; }
+.navbar-fixed {
+  height: 4em;
+  margin-left: 1em;
+  margin-right: 1em; }
+  .navbar-fixed nav {
+    background: rgba(0, 10, 27, 0.8);
+    margin: auto;
+    border-radius: 4em 4em 4em 4em;
+    opacity: 0.85; }
+    .navbar-fixed nav .nav-wrapper {
+      padding-left: 1em;
+      padding-right: 1em; }
+      .navbar-fixed nav .nav-wrapper ul li a {
+        color: #ffffb4; }
+        .navbar-fixed nav .nav-wrapper ul li a:hover {
+          color: yellow; }
 
 /* WELCOME MESSAGE COMPONENT */
 #welcome-message {
   padding: 20px;
   margin: 20px;
   text-align: center; }
-
-#welcome-message p {
-  border-radius: 2em 2em;
-  background: rgba(0, 30, 70, 0.85);
-  width: 25em;
-  padding: 20px;
-  margin: auto;
-  text-shadow: 2px 1px #000; }
-
-#welcome-message span.link {
-  color: #64B5F6;
-  cursor: pointer; }
-
-#welcome-message span.link:hover {
-  color: #eee; }
+  #welcome-message p {
+    border-radius: 2em 2em;
+    background: rgba(0, 30, 70, 0.85);
+    width: 25em;
+    padding: 20px;
+    margin: auto;
+    text-shadow: 2px 1px #000; }
+  #welcome-message span.link {
+    color: #64B5F6;
+    cursor: pointer; }
+    #welcome-message span.link:hover {
+      color: #eee; }
 
 /* RESULTS COMPONENT */
 #results {
   margin: auto; }
-
-#results h3 {
-  color: #e6e6e6;
-  text-shadow: 2px 3px #000;
-  padding: 10px; }
+  #results h3 {
+    color: #e6e6e6;
+    text-shadow: 2px 3px #000;
+    padding: 10px; }
 
 /* FEELING FORM COMPONENT */
 #feeling-form {
   margin: auto;
   width: 30em;
   text-align: center; }
-
-input[type=text] {
-  color: #fcfcfc;
-  font-size: 2em; }
-
-input[type=text]:focus {
-  border-bottom: 1px solid #000;
-  box-shadow: 0 1px 0 0 #000; }
+  #feeling-form input[type=text] {
+    color: #fcfcfc;
+    font-size: 2em; }
+    #feeling-form input[type=text]:focus {
+      border-bottom: 1px solid rgba(0, 10, 27, 0.6);
+      box-shadow: 0 1px 0 0 rgba(0, 30, 70, 0.85); }
 
 .btn {
   background: #324678;
@@ -1702,9 +1691,8 @@ input[type=text]:focus {
   text-transform: capitalize;
   margin: 10px;
   color: #fcfcfc; }
-
-.btn:hover {
-  background: rgba(0, 30, 70, 0.85); }
+  .btn:hover {
+    background: rgba(0, 30, 70, 0.85); }
 
 /* FEELING SHOW COMPONENT */
 .feeling-show {
@@ -1714,19 +1702,17 @@ input[type=text]:focus {
   background: rgba(0, 10, 27, 0.6);
   width: 30em;
   border-radius: 1em 3em; }
-
-.feeling-show h3 {
-  text-align: center;
-  font-size: 1.5em; }
-
-.feeling-show p {
-  font-size: 1em;
-  color: #e6e6e6;
-  margin-left: 15%;
-  margin-right: 10%;
-  background: rgba(0, 30, 70, 0.85);
-  padding: 20px;
-  border-radius: 2em 2em; }
+  .feeling-show h3 {
+    text-align: center;
+    font-size: 1.5em; }
+  .feeling-show p {
+    font-size: 1em;
+    color: #e6e6e6;
+    margin-left: 15%;
+    margin-right: 10%;
+    background: rgba(0, 30, 70, 0.85);
+    padding: 20px;
+    border-radius: 2em 2em; }
 
 /* PLANT SHOW COMPONENT */
 .plant-show-container {
@@ -1734,22 +1720,19 @@ input[type=text]:focus {
   margin: auto;
   flex-flow: row wrap;
   justify-content: space-around; }
-
-.plant-show {
-  border-radius: 1em 3em;
-  overflow: hidden;
-  width: 20em;
-  height: auto;
-  max-height: 30em;
-  background: rgba(0, 10, 27, 0.6);
-  color: #fcfcfc; }
-
-.plant-show h3 {
-  text-align: center;
-  font-size: 1.5em; }
-
-.plant-show p {
-  overflow: auto;
-  background: rgba(0, 30, 70, 0.85);
-  padding: 10px;
-  height: 300px; }
+  .plant-show-container .plant-show {
+    border-radius: 1em 3em;
+    overflow: hidden;
+    width: 20em;
+    height: auto;
+    max-height: 30em;
+    background: rgba(0, 10, 27, 0.6);
+    color: #fcfcfc; }
+    .plant-show-container .plant-show h3 {
+      text-align: center;
+      font-size: 1.5em; }
+    .plant-show-container .plant-show p {
+      overflow: auto;
+      background: rgba(0, 30, 70, 0.85);
+      padding: 10px;
+      height: 300px; }
