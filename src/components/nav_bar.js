@@ -10,9 +10,9 @@ export default function() {
 		      	Plant Spirit App
 	      	</a>
 		      <ul className="right">
-		        <li><a href="#" className="waves-effect">How to Use This App</a></li>
-		        <li><a href="#" className="waves-effect">About Béthany</a></li>
-		        <li><a href="http://www.oluminousbeing.com/" target="_blank" className="waves-effect">O Luminous Being</a></li>
+		        <li><a href="#" className="waves-effect waves-light">How to Use This App</a></li>
+		        <li><a href="#" className="waves-effect waves-light">About Béthany</a></li>
+		        <li><a href="http://www.oluminousbeing.com/" target="_blank" className="waves-effect waves-light">O Luminous Being</a></li>
 		      </ul>
 		    </div>
 		  </nav>
