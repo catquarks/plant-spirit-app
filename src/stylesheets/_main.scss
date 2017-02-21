@@ -1,23 +1,21 @@
 @import url('https://fonts.googleapis.com/css?family=Arsenal');
 @import "materialize-css/sass/components/_color.scss";
 
+$background-color: color("cyan", "darken-2") !default;
+$tertiary-color: #ccffff;
+/*$tertiary-color: #aaffff !default;*/
+$secondary-color: rgba(0, 120, 70, 0.9) !default;
+/*$secondary-color: #aaffff;*/
+$primary-color: #dfffdd !default;
 
-/*$background-color: color("cyan", "lighten-4") !default;
-$primary-color: rgba(0, 100, 100, 0.7);
-$secondary-color: color("cyan", "accent-4") !default;*/
-/*rgba(256, 256, 200, 0.2)*/
-$background-color: color("cyan", "lighten-4") !default;
-$secondary-color: color("cyan", "darken-2") !default;
-
-$primary-color: #aaffff !default;
-$tertiary-color: color("cyan", "lighten-3") !default;
 $text-color: #444444;
-$link-color: color("blue", "lighten-2") !default;
+$link-color: color("blue", "lighten-1") !default;
+$link-hover-color: rgba(0, 100, 140, 1);
 $nav-color: rgba(200, 260, 110, 1) !default;
 $nav-hover-color: rgba(256, 256, 200, 1) !default;
-$small-title: color("cyan", "lighten-5") !default;
+$small-title: rgba(240, 240, 240, 1) !default;
 $results-bg: color("cyan", "lighten-3") !default;
-$button-color: rgba(0, 100, 100, 1) !default;
+$button-color: rgba(0, 180, 180, 1) !default;
 
 
 body {
@@ -62,11 +60,11 @@ p {
 
 
 #app-body {
-  $background-color: #ddffff;
+  /*$background-color: #ddffff;*/
   margin-top: 2em;
   margin-left: 2em;
   margin-right: 2em;
-  background: $background-color;
+  background: $tertiary-color;
   border-radius: 2em 2em;
 }
 
@@ -74,6 +72,7 @@ p {
   body {
     font-size: 3vw;
   }
+
   #app-body {
     margin-left: 5%;
     margin-right: 5%;
@@ -89,19 +88,18 @@ p {
   text-align: center;
 
   p {
-    border-radius: 2em 2em;
-    background: $primary-color;
+    border-radius: 1em 1em;
+    background: inherit;
     width: 25em;
     padding: 20px;
     margin: auto;
-    /*text-shadow: 2px 1px #000;*/
   }
 
   span.link {
     color: $link-color;
     cursor: pointer;
     &:hover {
-      color: #eee;
+      color: $link-hover-color;
     }
   }
 }
@@ -114,7 +112,6 @@ p {
 
   h3 {
     color: $small-title;
-    /*text-shadow: 2px 3px #000;*/
     padding: 10px;
   }
 }
@@ -124,12 +121,13 @@ p {
 
 #feeling-form {
   margin: auto;
-  width: 30em;
+  width: 28em;
   text-align: center;
 
   input[type=text] {
     color: $text-color;
     font-size: 2em;
+    text-align: center;
 
     &:focus {
      border-bottom: 1px solid $secondary-color;
@@ -160,8 +158,8 @@ p {
   margin: auto;
   height: auto;
   color: $text-color;
-  background: $tertiary-color;
-  width: 30em;
+  background: $secondary-color;
+  width: 28em;
   border-radius: 1em 3em;
 
   h3 {
@@ -171,7 +169,7 @@ p {
 
   p {
     font-size: 1em;
-    color: $small-title;
+    color: $text-color;
     margin-left: 15%;
     margin-right: 10%;
     background: $primary-color;
@@ -195,7 +193,7 @@ p {
     width: 20em;
     height: auto;
     max-height: 30em;
-    background: $tertiary-color;
+    background: $secondary-color;
     color: $text-color;
 
     h3 {

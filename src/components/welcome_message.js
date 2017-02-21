@@ -18,9 +18,9 @@ class WelcomeMessage extends Component {
 
 	outputWelcomeMessage(){
 		if (this.props.appMode === 'easing_plants'){
-			return 'How are you feeling?'
+			return 'What are you feeling?'
 		} else {
-			return 'How would you like to feel?'
+			return 'What would you like to feel?'
 		}
 	}
 
