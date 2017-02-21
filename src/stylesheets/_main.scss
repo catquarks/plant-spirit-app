@@ -2,13 +2,18 @@
 @import "materialize-css/sass/components/_color.scss";
 
 
+/*$background-color: color("cyan", "lighten-4") !default;
+$primary-color: rgba(0, 100, 100, 0.7);
+$secondary-color: color("cyan", "accent-4") !default;*/
+/*rgba(256, 256, 200, 0.2)*/
 $background-color: color("cyan", "lighten-4") !default;
-$primary-color: rgba(0, 100, 100, 0.85);
-$secondary-color: color("cyan", "accent-4") !default;
-$tertiary-color: rgba(0, 10, 27, 0.6) !default;
-$text-color: #fcfcfc;
+$secondary-color: color("cyan", "darken-2") !default;
+
+$primary-color: #aaffff !default;
+$tertiary-color: color("cyan", "lighten-3") !default;
+$text-color: #444444;
 $link-color: color("blue", "lighten-2") !default;
-$nav-color: rgba(140, 200, 110, 1) !default;
+$nav-color: rgba(200, 260, 110, 1) !default;
 $nav-hover-color: rgba(256, 256, 200, 1) !default;
 $small-title: color("cyan", "lighten-5") !default;
 $results-bg: color("cyan", "lighten-3") !default;
@@ -16,10 +21,10 @@ $button-color: rgba(0, 100, 100, 1) !default;
 
 
 body {
-  background: url('images/leaf.jpg') fixed $background-color;
+  background: $background-color;
   margin-bottom: 15%;
   font-family: 'Arsenal', sans-serif;
-  font-size: 1.75rem;
+  font-size: 1.75rem; 
 }
 
 
@@ -39,7 +44,7 @@ p {
     $background-color: #001027;
     margin: auto;
     border-radius: 4em 4em 4em 4em;
-    background: $background-color;
+    background: $background-color url('images/leaf.jpg');
     opacity: 0.85;
 
     .nav-wrapper {
@@ -57,7 +62,7 @@ p {
 
 
 #app-body {
-  $background-color: rgba(256, 256, 200, 0.2);
+  $background-color: #ddffff;
   margin-top: 2em;
   margin-left: 2em;
   margin-right: 2em;
@@ -89,7 +94,7 @@ p {
     width: 25em;
     padding: 20px;
     margin: auto;
-    text-shadow: 2px 1px #000;
+    /*text-shadow: 2px 1px #000;*/
   }
 
   span.link {
@@ -109,7 +114,7 @@ p {
 
   h3 {
     color: $small-title;
-    text-shadow: 2px 3px #000;
+    /*text-shadow: 2px 3px #000;*/
     padding: 10px;
   }
 }
