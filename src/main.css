@@ -1607,7 +1607,7 @@ body {
   background: #0097a7;
   margin-bottom: 15%;
   font-family: 'Arsenal', sans-serif;
-  font-size: 1.75rem; }
+  font-size: 1.25rem; }
 
 p {
   font-size: 1em;
@@ -1728,11 +1728,23 @@ p {
     max-height: 30em;
     background: rgba(0, 120, 70, 0.9);
     color: #444444; }
-    .plant-show-container .plant-show h3 {
+    .plant-show-container .plant-show .image-area {
+      min-width: inherit;
+      height: 50%;
       text-align: center;
-      font-size: 1.5em; }
-    .plant-show-container .plant-show p {
-      overflow: auto;
-      background: #dfffdd;
-      padding: 10px;
-      height: 300px; }
+      overflow: hidden; }
+      .plant-show-container .plant-show .image-area img {
+        min-width: 100%;
+        min-height: 100%; }
+      .plant-show-container .plant-show .image-area .title {
+        font-size: 1.5em; }
+    .plant-show-container .plant-show .summary-area {
+      margin: 1em 1em;
+      min-height: 15em;
+      height: auto; }
+      .plant-show-container .plant-show .summary-area p {
+        background: #dfffdd;
+        border-radius: 2em 2em;
+        padding: 1em;
+        min-height: 11em;
+        height: auto; }

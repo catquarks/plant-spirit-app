@@ -10,7 +10,7 @@ class PlantsList extends React.Component {
 				<div className="plant-show-container">
 				{this.props.plants.map(plant => {
 					return(
-						<PlantShow key={plant.id} name={plant.name} summary={plant.summary} image={plant.image} />
+						<PlantShow key={plant.id} name={plant.name} summary={plant.summary} thumb={plant.thumb_pic} medium={plant.medium_pic} large={plant.large_pic} />
 					)
 				})}
 				</div>

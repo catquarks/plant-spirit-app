@@ -22,7 +22,7 @@ body {
   background: $background-color;
   margin-bottom: 15%;
   font-family: 'Arsenal', sans-serif;
-  font-size: 1.75rem; 
+  font-size: 1.25rem; 
 }
 
 
@@ -196,17 +196,37 @@ p {
     background: $secondary-color;
     color: $text-color;
 
-    h3 {
+    .image-area {
+      min-width: inherit;
+      height: 50%;
       text-align: center;
-      font-size: 1.5em;
+      overflow: hidden;
+
+      img {
+        min-width: 100%;
+        min-height: 100%;
+      }
+
+      .title {
+        font-size: 1.5em;
+      }
     }
 
-    p {
-      overflow: auto;
-      background: $primary-color;
-      padding: 10px;
-      height: 300px;
+    .summary-area {
+      margin: 1em 1em;
+      min-height: 15em;
+      height: auto;
+
+      p {
+        background: $primary-color;
+        border-radius: 2em 2em;
+        padding: 1em;
+        min-height: 11em;
+        height: auto;
+      }
+
     }
+
   }
 }
 

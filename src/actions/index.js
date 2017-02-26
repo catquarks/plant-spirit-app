@@ -1,3 +1,4 @@
+// const baseUrl = '/api/v1'
 const baseUrl = 'https://plant-spirit-app.herokuapp.com/api/v1'
 
 export function toggleAppMode(){
