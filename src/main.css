@@ -1601,22 +1601,52 @@
 .transparent-text {
   color: transparent !important; }
 
+/*$tertiary-color: #aaffff !default;*/
+/*$secondary-color: #aaffff;*/
 body {
+<<<<<<< HEAD
   background: url("images/cosmos.jpg") fixed rgba(0, 10, 27, 0.8);
+=======
+  background: #0097a7;
+>>>>>>> chill-theme
   margin-bottom: 15%;
   font-family: 'Arsenal', sans-serif;
-  font-size: 1.75rem; }
+  font-size: 1.25rem; }
 
 p {
   font-size: 1em;
   line-height: 2em;
-  color: #fcfcfc; }
+  color: #444444; }
 
+<<<<<<< HEAD
+=======
+/* NAV BAR COMPONENT */
+.navbar-fixed {
+  height: 2em; }
+  .navbar-fixed nav {
+    margin: auto;
+    border-radius: 4em 4em 4em 4em;
+    background: #001027 url("images/leaf.jpg");
+    opacity: 0.85; }
+    .navbar-fixed nav .nav-wrapper {
+      padding-left: 1em;
+      padding-right: 1em; }
+      .navbar-fixed nav .nav-wrapper ul li a {
+        color: #c8ff6e; }
+        .navbar-fixed nav .nav-wrapper ul li a:hover {
+          color: #ffffc8; }
+
+>>>>>>> chill-theme
 #app-body {
+  /*$background-color: #ddffff;*/
   margin-top: 2em;
   margin-left: 2em;
   margin-right: 2em;
+<<<<<<< HEAD
   background: rgba(255, 255, 200, 0.05);
+=======
+  background: #ccffff;
+>>>>>>> chill-theme
   border-radius: 2em 2em; }
 
 @media only screen and (max-width: 900px) {
@@ -1626,6 +1656,7 @@ p {
     margin-left: 5%;
     margin-right: 5%; } }
 
+<<<<<<< HEAD
 /* NAV BAR COMPONENT */
 .navbar-fixed {
   height: 4em; }
@@ -1642,12 +1673,15 @@ p {
         .navbar-fixed nav .nav-wrapper ul li a:hover {
           color: yellow; }
 
+=======
+>>>>>>> chill-theme
 /* WELCOME MESSAGE COMPONENT */
 #welcome-message {
   padding: 20px;
   margin: 20px;
   text-align: center; }
   #welcome-message p {
+<<<<<<< HEAD
     border-radius: 2em 2em;
     background: rgba(0, 30, 70, 0.85);
     width: 25em;
@@ -1659,21 +1693,38 @@ p {
     cursor: pointer; }
     #welcome-message span.link:hover {
       color: #eee; }
+=======
+    border-radius: 1em 1em;
+    background: inherit;
+    width: 25em;
+    padding: 20px;
+    margin: auto; }
+  #welcome-message span.link {
+    color: #42A5F5;
+    cursor: pointer; }
+    #welcome-message span.link:hover {
+      color: #00648c; }
+>>>>>>> chill-theme
 
 /* RESULTS COMPONENT */
 #results {
   margin: auto; }
   #results h3 {
+<<<<<<< HEAD
     color: #e6e6e6;
     text-shadow: 2px 3px #000;
+=======
+    color: #f0f0f0;
+>>>>>>> chill-theme
     padding: 10px; }
 
 /* FEELING FORM COMPONENT */
 #feeling-form {
   margin: auto;
-  width: 30em;
+  width: 28em;
   text-align: center; }
   #feeling-form input[type=text] {
+<<<<<<< HEAD
     color: #fcfcfc;
     font-size: 2em; }
     #feeling-form input[type=text]:focus {
@@ -1682,33 +1733,57 @@ p {
 
 .btn {
   background: #324678;
+=======
+    color: #444444;
+    font-size: 2em;
+    text-align: center; }
+    #feeling-form input[type=text]:focus {
+      border-bottom: 1px solid rgba(0, 120, 70, 0.9);
+      box-shadow: 0 1px 0 0 #dfffdd; }
+
+.btn {
+  background: #00b4b4;
+>>>>>>> chill-theme
   vertical-align: center;
   height: auto;
   max-height: 6em;
   word-wrap: break-word;
   text-transform: capitalize;
   margin: 10px;
+<<<<<<< HEAD
   color: #fcfcfc; }
   .btn:hover {
     background: rgba(0, 30, 70, 0.85); }
+=======
+  color: #444444; }
+  .btn:hover {
+    background: #dfffdd; }
+>>>>>>> chill-theme
 
 /* FEELING SHOW COMPONENT */
 .feeling-show {
   margin: auto;
   height: auto;
-  color: #fcfcfc;
-  background: rgba(0, 10, 27, 0.6);
-  width: 30em;
+  color: #444444;
+  background: rgba(0, 120, 70, 0.9);
+  width: 28em;
   border-radius: 1em 3em; }
   .feeling-show h3 {
     text-align: center;
     font-size: 1.5em; }
   .feeling-show p {
     font-size: 1em;
+<<<<<<< HEAD
     color: #e6e6e6;
     margin-left: 15%;
     margin-right: 10%;
     background: rgba(0, 30, 70, 0.85);
+=======
+    color: #444444;
+    margin-left: 15%;
+    margin-right: 10%;
+    background: #dfffdd;
+>>>>>>> chill-theme
     padding: 20px;
     border-radius: 2em 2em; }
 
@@ -1724,6 +1799,7 @@ p {
     width: 20em;
     height: auto;
     max-height: 30em;
+<<<<<<< HEAD
     background: rgba(0, 10, 27, 0.6);
     color: #fcfcfc; }
     .plant-show-container .plant-show h3 {
@@ -1734,3 +1810,27 @@ p {
       background: rgba(0, 30, 70, 0.85);
       padding: 10px;
       height: 300px; }
+=======
+    background: rgba(0, 120, 70, 0.9);
+    color: #444444; }
+    .plant-show-container .plant-show .image-area {
+      min-width: inherit;
+      height: 50%;
+      text-align: center;
+      overflow: hidden; }
+      .plant-show-container .plant-show .image-area img {
+        min-width: 100%;
+        min-height: 100%; }
+      .plant-show-container .plant-show .image-area .title {
+        font-size: 1.5em; }
+    .plant-show-container .plant-show .summary-area {
+      margin: 1em 1em;
+      min-height: 15em;
+      height: auto; }
+      .plant-show-container .plant-show .summary-area p {
+        background: #dfffdd;
+        border-radius: 2em 2em;
+        padding: 1em;
+        min-height: 11em;
+        height: auto; }
+>>>>>>> chill-theme

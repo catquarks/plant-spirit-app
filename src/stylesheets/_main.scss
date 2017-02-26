@@ -1,24 +1,28 @@
 @import url('https://fonts.googleapis.com/css?family=Arsenal');
-
 @import "materialize-css/sass/components/_color.scss";
 
-$background-color: rgba(0, 10, 27, 0.8);
-$primary-color: rgba(0, 30, 70, 0.85) !default;
-$secondary-color: rgba(0, 10, 27, 0.6) !default;
-$tertiary-color: rgba(0, 10, 27, 0.6) !default;
-$text-color: #fcfcfc !default;
-$link-color: color("blue", "lighten-2") !default;
-$nav-color: rgba(256, 256, 180, 1) !default;
-$nav-hover-color: rgba(256, 256, 0, 1) !default;
-$small-title: rgba(230, 230, 230, 1);
-$button-color: rgba(50, 70, 120, 1);
+$background-color: color("cyan", "darken-2") !default;
+$tertiary-color: #ccffff;
+/*$tertiary-color: #aaffff !default;*/
+$secondary-color: rgba(0, 120, 70, 0.9) !default;
+/*$secondary-color: #aaffff;*/
+$primary-color: #dfffdd !default;
+
+$text-color: #444444;
+$link-color: color("blue", "lighten-1") !default;
+$link-hover-color: rgba(0, 100, 140, 1);
+$nav-color: rgba(200, 260, 110, 1) !default;
+$nav-hover-color: rgba(256, 256, 200, 1) !default;
+$small-title: rgba(240, 240, 240, 1) !default;
+$results-bg: color("cyan", "lighten-3") !default;
+$button-color: rgba(0, 180, 180, 1) !default;
 
 
 body {
-  background: url('images/cosmos.jpg') fixed $background-color;
+  background: $background-color;
   margin-bottom: 15%;
   font-family: 'Arsenal', sans-serif;
-  font-size: 1.75rem;
+  font-size: 1.25rem; 
 }
 
 
@@ -28,36 +32,17 @@ p {
   color: $text-color;
 }
 
-#app-body {
-  $background-color: rgba(256, 256, 200, 0.05);
-  margin-top: 2em;
-	margin-left: 2em;
-	margin-right: 2em;
-  background: $background-color;
-  border-radius: 2em 2em;
-}
-
-@media only screen and (max-width : 900px) {
-  body {
-    font-size: 3vw;
-  }
-  #app-body {
-    margin-left: 5%;
-    margin-right: 5%;
-  }
-}
-
 
 /* NAV BAR COMPONENT */
 
 .navbar-fixed {
-  height: 4em;
+  height: 2em;
 
-  
   nav {
-    background: $background-color;
+    $background-color: #001027;
     margin: auto;
     border-radius: 4em 4em 4em 4em;
+    background: $background-color url('images/leaf.jpg');
     opacity: 0.85;
 
     .nav-wrapper {
@@ -74,6 +59,27 @@ p {
 }
 
 
+#app-body {
+  /*$background-color: #ddffff;*/
+  margin-top: 2em;
+  margin-left: 2em;
+  margin-right: 2em;
+  background: $tertiary-color;
+  border-radius: 2em 2em;
+}
+
+@media only screen and (max-width : 900px) {
+  body {
+    font-size: 3vw;
+  }
+
+  #app-body {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}
+
+
 /* WELCOME MESSAGE COMPONENT */
 
 #welcome-message {
@@ -82,12 +88,11 @@ p {
   text-align: center;
 
   p {
-    border-radius: 2em 2em;
-    background: $primary-color;
+    border-radius: 1em 1em;
+    background: inherit;
     width: 25em;
     padding: 20px;
     margin: auto;
-    text-shadow: 2px 1px #000;
   }
 
   span.link {
@@ -95,7 +100,7 @@ p {
     cursor: pointer;
 
     &:hover {
-      color: #eee;
+      color: $link-hover-color;
     }
   }
 }
@@ -108,23 +113,22 @@ p {
 
   h3 {
     color: $small-title;
-    text-shadow: 2px 3px #000;
     padding: 10px;
   }
 }
-
 
 
 /* FEELING FORM COMPONENT */
 
 #feeling-form {
   margin: auto;
-  width: 30em;
+  width: 28em;
   text-align: center;
 
   input[type=text] {
     color: $text-color;
     font-size: 2em;
+    text-align: center;
 
     &:focus {
      border-bottom: 1px solid $secondary-color;
@@ -156,8 +160,8 @@ p {
   margin: auto;
   height: auto;
   color: $text-color;
-  background: $tertiary-color;
-  width: 30em;
+  background: $secondary-color;
+  width: 28em;
   border-radius: 1em 3em;
 
   h3 {
@@ -167,7 +171,7 @@ p {
 
   p {
     font-size: 1em;
-    color: $small-title;
+    color: $text-color;
     margin-left: 15%;
     margin-right: 10%;
     background: $primary-color;
@@ -191,22 +195,40 @@ p {
     width: 20em;
     height: auto;
     max-height: 30em;
-    background: $tertiary-color;
+    background: $secondary-color;
     color: $text-color;
 
-    h3 {
+    .image-area {
+      min-width: inherit;
+      height: 50%;
       text-align: center;
-      font-size: 1.5em;
+      overflow: hidden;
+
+      img {
+        min-width: 100%;
+        min-height: 100%;
+      }
+
+      .title {
+        font-size: 1.5em;
+      }
     }
 
-    p {
-      overflow: auto;
-      background: $primary-color;
-      padding: 10px;
-      height: 300px;
+    .summary-area {
+      margin: 1em 1em;
+      min-height: 15em;
+      height: auto;
+
+      p {
+        background: $primary-color;
+        border-radius: 2em 2em;
+        padding: 1em;
+        min-height: 11em;
+        height: auto;
+      }
+
     }
-  }  
+
+  }
 }
-
-
 
