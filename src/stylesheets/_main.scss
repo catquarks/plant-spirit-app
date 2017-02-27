@@ -77,7 +77,7 @@ span.link {
 
 .navbar-fixed {
   height: 2em;
-  z-index: 0;
+  z-index: 1;
 
   nav {
     $background-color: #001027;
@@ -151,6 +151,7 @@ span.link {
 
 #results {
   margin: auto;
+  z-index: 0;
 
   h3 {
     color: $small-title;

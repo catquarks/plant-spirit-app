@@ -1641,7 +1641,7 @@ span.link {
 /* NAV BAR COMPONENT */
 .navbar-fixed {
   height: 2em;
-  z-index: 0; }
+  z-index: 1; }
   .navbar-fixed nav {
     margin: auto;
     border-radius: 4em 4em 4em 4em;
@@ -1689,7 +1689,8 @@ span.link {
 
 /* RESULTS COMPONENT */
 #results {
-  margin: auto; }
+  margin: auto;
+  z-index: 0; }
   #results h3 {
     color: #f0f0f0;
     padding: 10px; }
