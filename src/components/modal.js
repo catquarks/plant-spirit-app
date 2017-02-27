@@ -1,5 +1,5 @@
 import React from 'react'
-import Modal from 'react-modal'
+import Modal from 'react-responsive-modal'
 import AboutApp from './about_app'
 import AboutCreators from './about_creators'
 
@@ -24,12 +24,11 @@ export default function(props){
 
 	return(
     <Modal
-	    isOpen={props.modalIsOpen}
-	    onAfterOpen={props.afterOpenModal}
+	    open={props.modalIsOpen}
 	    onRequestClose={props.closeModal}
 	    style={customStyles}
 	    contentLabel="Modal"
-	    closeModal={props.closeModal}
+	    onClose={props.closeModal}
   	>
 			{props.currentModal === 'about-app' ? <AboutApp /> : null}
 			{props.currentModal === 'about-creators' ? <AboutCreators /> : null}

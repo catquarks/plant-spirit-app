@@ -37,10 +37,6 @@ class App extends Component {
     })
   }
 
-  afterOpenModal(){
-    console.log('the modal opened')
-  }
-
   closeModal(){
     this.setState({
       modalIsOpen: false
@@ -50,7 +46,9 @@ class App extends Component {
   render() {
     return (
       <div id="app">
-        <Modal modalIsOpen={this.state.modalIsOpen} afterOpenModal={this.afterOpenModal.bind(this)} closeModal={this.closeModal.bind(this)} currentModal={this.state.currentModal} />
+        <Modal modalIsOpen={this.state.modalIsOpen}
+          closeModal={this.closeModal.bind(this)}
+          currentModal={this.state.currentModal} />
         <NavBar handleModalClick={this.handleModalClick.bind(this)} />
         <div id="app-body">
           <WelcomeMessage />
