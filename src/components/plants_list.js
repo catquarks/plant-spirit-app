@@ -1,5 +1,4 @@
 import React from 'react'
-import { connect } from 'react-redux'
 import PlantShow from './plant_show'
 
 export default function(props){

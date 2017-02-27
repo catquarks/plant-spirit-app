@@ -1607,16 +1607,41 @@ body {
   background: #0097a7;
   margin-bottom: 15%;
   font-family: 'Arsenal', sans-serif;
-  font-size: 1.25rem; }
+  font-size: 1.5rem; }
 
 p {
   font-size: 1em;
   line-height: 2em;
   color: #444444; }
 
+span.link {
+  cursor: pointer;
+  padding-left: 5px;
+  padding-right: 5px; }
+
+.about-app-modal, .about-creators-modal {
+  font-size: 1.25rem;
+  margin-left: 15%;
+  margin-right: 10%; }
+  .about-app-modal h1, .about-creators-modal h1 {
+    font-size: 2em; }
+  .about-app-modal h3, .about-creators-modal h3 {
+    font-size: 1.5em; }
+  .about-app-modal p, .about-creators-modal p {
+    line-height: 1.25em; }
+  .about-app-modal strong, .about-creators-modal strong {
+    font-weight: bold; }
+  .about-app-modal ul, .about-creators-modal ul {
+    list-style-type: circle; }
+    .about-app-modal ul li, .about-creators-modal ul li {
+      margin-left: 3em; }
+  .about-app-modal a:hover, .about-creators-modal a:hover {
+    color: #00648c; }
+
 /* NAV BAR COMPONENT */
 .navbar-fixed {
-  height: 2em; }
+  height: 2em;
+  z-index: 0; }
   .navbar-fixed nav {
     margin: auto;
     border-radius: 4em 4em 4em 4em;
@@ -1625,9 +1650,10 @@ p {
     .navbar-fixed nav .nav-wrapper {
       padding-left: 1em;
       padding-right: 1em; }
-      .navbar-fixed nav .nav-wrapper ul li a {
+      .navbar-fixed nav .nav-wrapper ul li span.link {
+        font-size: 0.6em;
         color: #c8ff6e; }
-        .navbar-fixed nav .nav-wrapper ul li a:hover {
+        .navbar-fixed nav .nav-wrapper ul li span.link:hover {
           color: #ffffc8; }
 
 #app-body {
@@ -1638,7 +1664,7 @@ p {
   background: #ccffff;
   border-radius: 2em 2em; }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 800px) {
   body {
     font-size: 3vw; }
   #app-body {
@@ -1657,8 +1683,7 @@ p {
     padding: 20px;
     margin: auto; }
   #welcome-message span.link {
-    color: #42A5F5;
-    cursor: pointer; }
+    color: #42A5F5; }
     #welcome-message span.link:hover {
       color: #00648c; }
 
@@ -1681,6 +1706,8 @@ p {
     #feeling-form input[type=text]:focus {
       border-bottom: 1px solid rgba(0, 120, 70, 0.9);
       box-shadow: 0 1px 0 0 #dfffdd; }
+  #feeling-form button {
+    z-index: 0; }
 
 .btn {
   background: #00b4b4;

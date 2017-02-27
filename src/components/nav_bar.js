@@ -1,6 +1,14 @@
 import React from 'react'
 
-export default function() {
+export default function(props){
+
+	function clickAboutApp(){
+		props.handleModalClick('about-app')
+	}
+
+	function clickAboutCreators(){
+		props.handleModalClick('about-creators')
+	}
 
 	return(
 		<div className="navbar-fixed">
@@ -10,9 +18,8 @@ export default function() {
 		      	Plant Spirit App
 	      	</a>
 		      <ul className="right">
-		        <li><a href="#" className="waves-effect waves-light">How to Use This App</a></li>
-		        <li><a href="#" className="waves-effect waves-light">About Béthany</a></li>
-		        <li><a href="http://www.oluminousbeing.com/" target="_blank" className="waves-effect waves-light">O Luminous Being</a></li>
+		        <li><span className="link waves-effect waves-light" onClick={clickAboutApp}>How to Use This App</span></li>
+		        <li><span className="link waves-effect waves-light" onClick={clickAboutCreators}>About the Creators</span></li>
 		      </ul>
 		    </div>
 		  </nav>

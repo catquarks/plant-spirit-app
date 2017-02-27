@@ -13,6 +13,8 @@
     "materialize-css": "^0.98.0",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
+    "react-modal": "^1.6.5",
+    "react-popup": "^0.5.0",
     "react-redux": "^5.0.2",
     "redux": "^3.6.0",
     "redux-promise": "^0.5.3"
@@ -25,7 +27,5 @@
     "build-css": "npm-sass ./src/stylesheets/_main.scss > ./src/main.css",
     "watch-css": "nodemon -e scss -x  \"npm run build-css\""
   },
-
   "homepage": "http://comfortcat.xyz/secret-chill"
-
 }

@@ -66,7 +66,9 @@ class FeelingForm extends React.Component {
 					})}
 	        	
 	        </datalist>
-	        <input type="submit" className="waves-effect waves-light btn" />
+	        <button className="waves-effect waves-light btn">
+	        	Submit
+        	</button>
 	      </form>
       </div>
 		)
