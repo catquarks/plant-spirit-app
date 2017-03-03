@@ -26,17 +26,18 @@ class FeelingForm extends React.Component {
 		e.stopPropagation();
 		this.setState({query: ''})
 
+		const lowerCaseQuery = this.state.query.toLowerCase()
+
 		const queriedFeeling = this.props.feelings.find(feeling => {
-			return feeling.name === this.state.query
+			return feeling.name.toLowerCase() === lowerCaseQuery
 		})
 
 		if (queriedFeeling === undefined){
 			alert('Is there another way to describe your feeling?')
 		} else {
-			this.props.actions.fetchPlants(this.state.query, this.props.appMode)
-
+			this.props.actions.fetchPlants(queriedFeeling.name, this.props.appMode)
 			const currentFeeling = this.props.feelings.find(feeling => {
-				return feeling.name === this.state.query
+				return feeling.name.toLowerCase() === lowerCaseQuery
 			})
 			this.props.actions.setCurrentFeeling(currentFeeling)
 		}

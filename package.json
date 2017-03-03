@@ -27,7 +27,7 @@
     "eject": "react-scripts eject",
     "build-css": "npm-sass ./src/stylesheets/_main.scss > ./src/main.css",
     "watch-css": "nodemon -e scss -x  \"npm run build-css\"",
-    "deploy": "\"npm run build\" && uwcc plant-spirit-app/build secret-chill"
+    "deploy": "npm run build  \"uwcc plant-spirit-app/build secret-chill\""
   },
   "homepage": "http://comfortcat.xyz/secret-chill"
 }
