@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Arsenal");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 .materialize-red {
   background-color: #e51c23 !important; }
 
@@ -1610,11 +1611,11 @@ body {
   font-size: 1.5rem; }
 
 p {
-  font-size: 1em;
+  font-size: 1.3em;
   line-height: 2em;
   color: #444444; }
 
-span.link {
+span.link, a.link {
   cursor: pointer;
   padding-left: 5px;
   padding-right: 5px; }
@@ -1650,11 +1651,16 @@ span.link {
     .navbar-fixed nav .nav-wrapper {
       padding-left: 1em;
       padding-right: 1em; }
-      .navbar-fixed nav .nav-wrapper ul li span.link {
-        font-size: 0.6em;
+      .navbar-fixed nav .nav-wrapper ul li span.link,
+      .navbar-fixed nav .nav-wrapper ul li a.link {
+        font-size: 0.8em;
         color: #c8ff6e; }
-        .navbar-fixed nav .nav-wrapper ul li span.link:hover {
+        .navbar-fixed nav .nav-wrapper ul li span.link:hover,
+        .navbar-fixed nav .nav-wrapper ul li a.link:hover {
           color: #ffffc8; }
+
+#dropdown1 .link {
+  background: #003927 url("images/lotus.png"); }
 
 #app-body {
   /*$background-color: #ddffff;*/
@@ -1664,23 +1670,14 @@ span.link {
   background: #ccffff;
   border-radius: 2em 2em; }
 
-@media only screen and (max-width: 800px) {
-  body {
-    font-size: 3vw; }
-  #app-body {
-    margin-left: 5%;
-    margin-right: 5%; } }
-
 /* WELCOME MESSAGE COMPONENT */
 #welcome-message {
-  padding: 20px;
-  margin: 20px;
+  margin-left: 2.5em;
+  margin-right: 2.5em;
   text-align: center; }
   #welcome-message p {
-    border-radius: 1em 1em;
     background: inherit;
-    width: 25em;
-    padding: 20px;
+    padding: 1.5em;
     margin: auto; }
   #welcome-message span.link {
     color: #42A5F5; }
@@ -1693,12 +1690,12 @@ span.link {
   z-index: 0; }
   #results h3 {
     color: #f0f0f0;
-    padding: 10px; }
+    padding: 0.5em; }
 
 /* FEELING FORM COMPONENT */
 #feeling-form {
   margin: auto;
-  width: 28em;
+  width: 90%;
   text-align: center; }
   #feeling-form input[type=text] {
     color: #444444;
@@ -1747,7 +1744,8 @@ span.link {
   display: flex;
   margin: auto;
   flex-flow: row wrap;
-  justify-content: space-around; }
+  justify-content: space-around;
+  width: 100%; }
   .plant-show-container .plant-show {
     border-radius: 1em 3em;
     overflow: hidden;
@@ -1776,3 +1774,15 @@ span.link {
         padding: 1em;
         min-height: 13em;
         height: auto; }
+
+@media only screen and (max-width: 700px) {
+  body {
+    font-size: 5vw; }
+  #welcome-message {
+    margin: auto; }
+  #app-body {
+    margin-top: 1.5em;
+    margin-left: 1em;
+    margin-right: 1em; }
+  .feeling-show {
+    width: 100%; } }

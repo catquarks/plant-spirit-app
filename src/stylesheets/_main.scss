@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Arsenal');
 @import "materialize-css/sass/components/_color.scss";
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 
 $background-color: color("cyan", "darken-2") !default;
 $tertiary-color: #ccffff;
@@ -27,12 +28,12 @@ body {
 
 
 p {
-  font-size: 1em;
+  font-size: 1.3em;
   line-height: 2em;
   color: $text-color;
 }
 
-span.link {
+span.link, a.link {
   cursor: pointer;
   padding-left: 5px;
   padding-right: 5px;
@@ -89,14 +90,23 @@ span.link {
     .nav-wrapper {
       padding-left: 1em;
       padding-right: 1em;
-      ul li span.link {
-        font-size: 0.6em;
+
+      ul li span.link,
+      ul li a.link {
+        font-size: 0.8em;
         color: $nav-color;
+
         &:hover {
           color: $nav-hover-color;
         }
       }
     }
+  }
+}
+
+#dropdown1 {
+  .link {
+    background: #003927 url('images/lotus.png');
   }
 }
 
@@ -110,30 +120,19 @@ span.link {
   border-radius: 2em 2em;
 }
 
-@media only screen and (max-width : 800px) {
-  body {
-    font-size: 3vw;
-  }
 
-  #app-body {
-    margin-left: 5%;
-    margin-right: 5%;
-  }
-}
 
 
 /* WELCOME MESSAGE COMPONENT */
 
 #welcome-message {
-  padding: 20px;
-  margin: 20px;
+  margin-left: 2.5em;
+  margin-right: 2.5em;
   text-align: center;
 
   p {
-    border-radius: 1em 1em;
     background: inherit;
-    width: 25em;
-    padding: 20px;
+    padding: 1.5em;
     margin: auto;
   }
 
@@ -155,7 +154,7 @@ span.link {
 
   h3 {
     color: $small-title;
-    padding: 10px;
+    padding: 0.5em;
   }
 }
 
@@ -164,7 +163,7 @@ span.link {
 
 #feeling-form {
   margin: auto;
-  width: 28em;
+  width: 90%;
   text-align: center;
 
   input[type=text] {
@@ -234,6 +233,7 @@ span.link {
   margin: auto;
   flex-flow: row wrap;
   justify-content: space-around;
+  width: 100%;
 
   .plant-show {
     border-radius: 1em 3em;
@@ -278,3 +278,23 @@ span.link {
   }
 }
 
+@media only screen and (max-width : 700px) {
+  body {
+    font-size: 5vw;
+  }
+
+  #welcome-message {
+    margin: auto;
+  }
+
+  #app-body {
+    margin-top: 1.5em;
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+
+  .feeling-show {
+    width: 100%;
+  }
+
+}

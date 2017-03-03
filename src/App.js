@@ -5,7 +5,7 @@ import FeelingForm from './components/feeling_form'
 import WelcomeMessage from './components/welcome_message'
 import Results from './components/results'
 import Modal from './components/modal'
-import $ from 'jquery'
+
 import 'materialize-css/bin/materialize.js'
 import 'materialize-css/bin/materialize.css'
 
@@ -18,19 +18,7 @@ class App extends Component {
     }
   }
 
-  componentDidMount(){
-    $( document ).ready(function(){
-      setTimeout(function(){
-
-        $(".button-collapse").sideNav();
-
-      }, 800)
-    })
-  }
-
   handleModalClick(modal){
-    console.log(modal + ' will open')
-
     this.setState({
       modalIsOpen: true,
       currentModal: modal
