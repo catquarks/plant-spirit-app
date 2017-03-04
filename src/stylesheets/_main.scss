@@ -4,9 +4,7 @@
 
 $background-color: color("cyan", "darken-2") !default;
 $tertiary-color: #ccffff;
-/*$tertiary-color: #aaffff !default;*/
 $secondary-color: rgba(0, 120, 70, 0.9) !default;
-/*$secondary-color: #aaffff;*/
 $primary-color: #dfffdd !default;
 
 $text-color: #444444;
@@ -23,12 +21,12 @@ body {
   background: $background-color;
   margin-bottom: 15%;
   font-family: 'Arsenal', sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
 }
 
 
 p {
-  font-size: 1.3em;
+  font-size: 1.1em;
   line-height: 2em;
   color: $text-color;
 }
@@ -87,6 +85,10 @@ span.link, a.link {
     background: $background-color url('images/leaf.jpg');
     opacity: 0.85;
 
+    .brand-logo {
+      font-size: 1.5em;
+    }
+
     .nav-wrapper {
       padding-left: 1em;
       padding-right: 1em;
@@ -106,7 +108,7 @@ span.link, a.link {
 
 #dropdown1 {
   .link {
-    background: #003927 url('images/lotus.png');
+    background: #003927;
   }
 }
 
@@ -146,29 +148,18 @@ span.link, a.link {
 }
 
 
-/* RESULTS COMPONENT */
-
-#results {
-  margin: auto;
-  z-index: 0;
-
-  h3 {
-    color: $small-title;
-    padding: 0.5em;
-  }
-}
 
 
 /* FEELING FORM COMPONENT */
 
 #feeling-form {
   margin: auto;
-  width: 90%;
+  width: 80%;
   text-align: center;
 
   input[type=text] {
     color: $text-color;
-    font-size: 2em;
+    font-size: 1.7em;
     text-align: center;
 
     &:focus {
@@ -199,88 +190,136 @@ span.link, a.link {
 }
 
 
-/* FEELING SHOW COMPONENT */
+/* RESULTS COMPONENT */
 
-.feeling-show {
-  margin: auto;
-  height: auto;
-  color: $text-color;
-  background: $secondary-color;
-  width: 28em;
-  border-radius: 1em 3em;
+#results {
+  width: 100%;
+  margin-top: 2em;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: center;
+  align-items: flex-start;
+  z-index: 0;
 
   h3 {
-    text-align: center;
-    font-size: 1.5em;
+    color: $small-title;
+    padding: 0.4em;
   }
 
-  p {
-    font-size: 1em;
-    color: $text-color;
-    margin-left: 15%;
-    margin-right: 10%;
-    background: $primary-color;
-    padding: 20px;  
-    border-radius: 2em 2em;
-  }
-}
 
+  /* FLEXBOX CHILDREN: FEELING SHOW COMPONENT, PLANT LIST TITLE COMPONENT, AND PLANTS LIST COMPONENT */
 
-/* PLANT SHOW COMPONENT */
-
-.plant-show-container {
-  display: flex;
-  margin: auto;
-  flex-flow: row wrap;
-  justify-content: space-around;
-  width: 100%;
-
-  .plant-show {
-    border-radius: 1em 3em;
-    overflow: hidden;
-    width: 22em;
+  #feeling-show {
     height: auto;
-    max-height: 45em;
-    background: $secondary-color;
     color: $text-color;
+    background: $secondary-color;
+    width: 27em;
+    border-radius: 1em 3em;
+    margin-bottom: 0.5em;
 
-    .image-area {
-      min-width: inherit;
-      height: 50%;
+    h3 {
       text-align: center;
-      overflow: hidden;
+      font-size: 1.5em;
+    }
 
-      img {
-        min-width: 100%;
-        min-height: 100%;
-      }
+    p {
+      font-size: 1em;
+      color: $text-color;
+      margin-left: 0.7em;
+      margin-right: 0.7em;
+      background: $primary-color;
+      padding: 0.6em;  
+      border-radius: 2em 2em;
+      line-height: 1.4em;
+    }
+  }
 
-      .title {
+
+  #plants-list {
+    width: 37em;
+    display: flex;
+    flex-shrink: 2;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    padding: 0;
+    margin: 0;
+
+    #plant-list-title {
+      margin: auto;
+      padding: 0;
+      width: 100%;
+      text-align: center;
+
+      h3 {
+        border-radius: 3em 2em;
+        text-align: center;
         font-size: 1.5em;
+        display: block;
+        margin: auto;
+        min-width: 5em;
+        width: auto;
+        max-width: 15em;
+        background: $secondary-color;
+
       }
     }
 
-    .summary-area {
-      margin: 1em 1em;
-      min-height: 15em;
+    .plant-show {
+      margin: 0.3em 0.3em 0 0.3em;
+      border-radius: 1em 3em;
+      overflow: hidden;
+      max-width: 17em;
       height: auto;
+      max-height: 42em;
+      background: $secondary-color;
+      color: $text-color;
 
-      p {
-        background: $primary-color;
-        border-radius: 2em 2em;
-        padding: 1em;
-        min-height: 13em;
-        height: auto;
+      .image-area {
+        min-width: inherit;
+        height: 50%;
+        text-align: center;
+        overflow: hidden;
+
+        img {
+          min-width: 100%;
+          min-height: 100%;
+        }
+
+        .title {
+          font-size: 1.5em;
+        }
       }
 
-    }
+      .summary-area {
+        margin: 1em 1em;
+        min-height: 15em;
+        height: auto;
 
+        p {
+          line-height: 1.4em;
+          background: $primary-color;
+          border-radius: 2em 2em;
+          padding: 1em;
+          min-height: 13em;
+          height: auto;
+        }
+      }
+    }
   }
 }
+
+
+
 
 @media only screen and (max-width : 700px) {
   body {
-    font-size: 5vw;
+    font-size: 4vw;
   }
 
   #welcome-message {
@@ -288,12 +327,12 @@ span.link, a.link {
   }
 
   #app-body {
-    margin-top: 1.5em;
+    margin-top: 2em;
     margin-left: 1em;
     margin-right: 1em;
   }
 
-  .feeling-show {
+  #feeling-show {
     width: 100%;
   }
 

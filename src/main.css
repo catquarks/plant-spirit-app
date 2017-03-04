@@ -1602,16 +1602,14 @@
 .transparent-text {
   color: transparent !important; }
 
-/*$tertiary-color: #aaffff !default;*/
-/*$secondary-color: #aaffff;*/
 body {
   background: #0097a7;
   margin-bottom: 15%;
   font-family: 'Arsenal', sans-serif;
-  font-size: 1.5rem; }
+  font-size: 1.4rem; }
 
 p {
-  font-size: 1.3em;
+  font-size: 1.1em;
   line-height: 2em;
   color: #444444; }
 
@@ -1648,6 +1646,8 @@ span.link, a.link {
     border-radius: 4em 4em 4em 4em;
     background: #001027 url("images/leaf.jpg");
     opacity: 0.85; }
+    .navbar-fixed nav .brand-logo {
+      font-size: 1.5em; }
     .navbar-fixed nav .nav-wrapper {
       padding-left: 1em;
       padding-right: 1em; }
@@ -1660,7 +1660,7 @@ span.link, a.link {
           color: #ffffc8; }
 
 #dropdown1 .link {
-  background: #003927 url("images/lotus.png"); }
+  background: #003927; }
 
 #app-body {
   /*$background-color: #ddffff;*/
@@ -1684,22 +1684,14 @@ span.link, a.link {
     #welcome-message span.link:hover {
       color: #00648c; }
 
-/* RESULTS COMPONENT */
-#results {
-  margin: auto;
-  z-index: 0; }
-  #results h3 {
-    color: #f0f0f0;
-    padding: 0.5em; }
-
 /* FEELING FORM COMPONENT */
 #feeling-form {
   margin: auto;
-  width: 90%;
+  width: 80%;
   text-align: center; }
   #feeling-form input[type=text] {
     color: #444444;
-    font-size: 2em;
+    font-size: 1.7em;
     text-align: center; }
     #feeling-form input[type=text]:focus {
       border-bottom: 1px solid rgba(0, 120, 70, 0.9);
@@ -1719,70 +1711,106 @@ span.link, a.link {
   .btn:hover {
     background: #dfffdd; }
 
-/* FEELING SHOW COMPONENT */
-.feeling-show {
-  margin: auto;
-  height: auto;
-  color: #444444;
-  background: rgba(0, 120, 70, 0.9);
-  width: 28em;
-  border-radius: 1em 3em; }
-  .feeling-show h3 {
-    text-align: center;
-    font-size: 1.5em; }
-  .feeling-show p {
-    font-size: 1em;
-    color: #444444;
-    margin-left: 15%;
-    margin-right: 10%;
-    background: #dfffdd;
-    padding: 20px;
-    border-radius: 2em 2em; }
-
-/* PLANT SHOW COMPONENT */
-.plant-show-container {
+/* RESULTS COMPONENT */
+#results {
+  width: 100%;
+  margin-top: 2em;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
-  margin: auto;
-  flex-flow: row wrap;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-around;
-  width: 100%; }
-  .plant-show-container .plant-show {
-    border-radius: 1em 3em;
-    overflow: hidden;
-    width: 22em;
+  align-content: center;
+  align-items: flex-start;
+  z-index: 0;
+  /* FLEXBOX CHILDREN: FEELING SHOW COMPONENT, PLANT LIST TITLE COMPONENT, AND PLANTS LIST COMPONENT */ }
+  #results h3 {
+    color: #f0f0f0;
+    padding: 0.4em; }
+  #results #feeling-show {
     height: auto;
-    max-height: 45em;
+    color: #444444;
     background: rgba(0, 120, 70, 0.9);
-    color: #444444; }
-    .plant-show-container .plant-show .image-area {
-      min-width: inherit;
-      height: 50%;
+    width: 27em;
+    border-radius: 1em 3em;
+    margin-bottom: 0.5em; }
+    #results #feeling-show h3 {
       text-align: center;
-      overflow: hidden; }
-      .plant-show-container .plant-show .image-area img {
-        min-width: 100%;
-        min-height: 100%; }
-      .plant-show-container .plant-show .image-area .title {
-        font-size: 1.5em; }
-    .plant-show-container .plant-show .summary-area {
-      margin: 1em 1em;
-      min-height: 15em;
-      height: auto; }
-      .plant-show-container .plant-show .summary-area p {
-        background: #dfffdd;
-        border-radius: 2em 2em;
-        padding: 1em;
-        min-height: 13em;
+      font-size: 1.5em; }
+    #results #feeling-show p {
+      font-size: 1em;
+      color: #444444;
+      margin-left: 0.7em;
+      margin-right: 0.7em;
+      background: #dfffdd;
+      padding: 0.6em;
+      border-radius: 2em 2em;
+      line-height: 1.4em; }
+  #results #plants-list {
+    width: 37em;
+    display: flex;
+    flex-shrink: 2;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    padding: 0;
+    margin: 0; }
+    #results #plants-list #plant-list-title {
+      margin: auto;
+      padding: 0;
+      width: 100%;
+      text-align: center; }
+      #results #plants-list #plant-list-title h3 {
+        border-radius: 3em 2em;
+        text-align: center;
+        font-size: 1.5em;
+        display: block;
+        margin: auto;
+        min-width: 5em;
+        width: auto;
+        max-width: 15em;
+        background: rgba(0, 120, 70, 0.9); }
+    #results #plants-list .plant-show {
+      margin: 0.3em 0.3em 0 0.3em;
+      border-radius: 1em 3em;
+      overflow: hidden;
+      max-width: 17em;
+      height: auto;
+      max-height: 42em;
+      background: rgba(0, 120, 70, 0.9);
+      color: #444444; }
+      #results #plants-list .plant-show .image-area {
+        min-width: inherit;
+        height: 50%;
+        text-align: center;
+        overflow: hidden; }
+        #results #plants-list .plant-show .image-area img {
+          min-width: 100%;
+          min-height: 100%; }
+        #results #plants-list .plant-show .image-area .title {
+          font-size: 1.5em; }
+      #results #plants-list .plant-show .summary-area {
+        margin: 1em 1em;
+        min-height: 15em;
         height: auto; }
+        #results #plants-list .plant-show .summary-area p {
+          line-height: 1.4em;
+          background: #dfffdd;
+          border-radius: 2em 2em;
+          padding: 1em;
+          min-height: 13em;
+          height: auto; }
 
 @media only screen and (max-width: 700px) {
   body {
-    font-size: 5vw; }
+    font-size: 4vw; }
   #welcome-message {
     margin: auto; }
   #app-body {
-    margin-top: 1.5em;
+    margin-top: 2em;
     margin-left: 1em;
     margin-right: 1em; }
-  .feeling-show {
+  #feeling-show {
     width: 100%; } }

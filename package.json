@@ -2,8 +2,8 @@
   "name": "plant-spirit-app",
   "version": "0.1.0",
   "private": true,
-  "realProxy": "http://localhost:3000",
-  "proxy": "https://plant-spirit-app.herokuapp.com",
+  "proxy": "http://localhost:3000",
+  "realProxy": "https://plant-spirit-app.herokuapp.com",
   "devDependencies": {
     "nodemon": "^1.11.0",
     "npm-sass": "^2.0.0",

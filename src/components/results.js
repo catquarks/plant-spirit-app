@@ -9,7 +9,7 @@ class Results extends React.Component {
 		return(
 			<div id="results">
 				<FeelingShow key={this.props.currentFeeling.id} name={this.props.currentFeeling.name} summary={this.props.currentFeeling.summary} appMode={this.props.appMode} />
-				<PlantsList plants={this.props.plants} />
+				<PlantsList plants={this.props.plants} appMode={this.props.appMode} />
 			</div>
 		)
 	}
