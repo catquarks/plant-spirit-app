@@ -193,15 +193,13 @@ span.link, a.link {
 /* RESULTS COMPONENT */
 
 #results {
-  width: 100%;
-  margin-top: 2em;
-  margin-left: auto;
-  margin-right: auto;
+  width: auto;
+  margin: auto;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-  align-content: center;
+  align-content: space-around;
   align-items: flex-start;
   z-index: 0;
 
@@ -219,7 +217,8 @@ span.link, a.link {
     background: $secondary-color;
     width: 27em;
     border-radius: 1em 3em;
-    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
 
     h3 {
       text-align: center;
@@ -240,19 +239,21 @@ span.link, a.link {
 
 
   #plants-list {
-    width: 37em;
+    /*width: 39em;*/
+    flex-basis: 39em;
+    flex-shrink: 1;
+    height: auto;
     display: flex;
-    flex-shrink: 2;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
-    align-content: center;
+    justify-content: space-between;
+    align-content: space-between;
     padding: 0;
-    margin: 0;
+    margin: auto;
 
     #plant-list-title {
       margin: auto;
-      padding: 0;
+      padding: 0.5em;
       width: 100%;
       text-align: center;
 
@@ -271,18 +272,17 @@ span.link, a.link {
     }
 
     .plant-show {
-      margin: 0.3em 0.3em 0 0.3em;
+      margin: auto;
       border-radius: 1em 3em;
       overflow: hidden;
-      max-width: 17em;
+      width: 19em;
       height: auto;
-      max-height: 42em;
       background: $secondary-color;
       color: $text-color;
 
       .image-area {
         min-width: inherit;
-        height: 50%;
+        height: 15em;
         text-align: center;
         overflow: hidden;
 
@@ -298,8 +298,7 @@ span.link, a.link {
 
       .summary-area {
         margin: 1em 1em;
-        min-height: 15em;
-        height: auto;
+        height: 15em;
 
         p {
           line-height: 1.4em;

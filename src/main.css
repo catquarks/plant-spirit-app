@@ -1713,15 +1713,13 @@ span.link, a.link {
 
 /* RESULTS COMPONENT */
 #results {
-  width: 100%;
-  margin-top: 2em;
-  margin-left: auto;
-  margin-right: auto;
+  width: auto;
+  margin: auto;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-  align-content: center;
+  align-content: space-around;
   align-items: flex-start;
   z-index: 0;
   /* FLEXBOX CHILDREN: FEELING SHOW COMPONENT, PLANT LIST TITLE COMPONENT, AND PLANTS LIST COMPONENT */ }
@@ -1734,7 +1732,8 @@ span.link, a.link {
     background: rgba(0, 120, 70, 0.9);
     width: 27em;
     border-radius: 1em 3em;
-    margin-bottom: 0.5em; }
+    margin-left: auto;
+    margin-right: auto; }
     #results #feeling-show h3 {
       text-align: center;
       font-size: 1.5em; }
@@ -1748,18 +1747,20 @@ span.link, a.link {
       border-radius: 2em 2em;
       line-height: 1.4em; }
   #results #plants-list {
-    width: 37em;
+    /*width: 39em;*/
+    flex-basis: 39em;
+    flex-shrink: 1;
+    height: auto;
     display: flex;
-    flex-shrink: 2;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
-    align-content: center;
+    justify-content: space-between;
+    align-content: space-between;
     padding: 0;
-    margin: 0; }
+    margin: auto; }
     #results #plants-list #plant-list-title {
       margin: auto;
-      padding: 0;
+      padding: 0.5em;
       width: 100%;
       text-align: center; }
       #results #plants-list #plant-list-title h3 {
@@ -1773,17 +1774,16 @@ span.link, a.link {
         max-width: 15em;
         background: rgba(0, 120, 70, 0.9); }
     #results #plants-list .plant-show {
-      margin: 0.3em 0.3em 0 0.3em;
+      margin: auto;
       border-radius: 1em 3em;
       overflow: hidden;
-      max-width: 17em;
+      width: 19em;
       height: auto;
-      max-height: 42em;
       background: rgba(0, 120, 70, 0.9);
       color: #444444; }
       #results #plants-list .plant-show .image-area {
         min-width: inherit;
-        height: 50%;
+        height: 15em;
         text-align: center;
         overflow: hidden; }
         #results #plants-list .plant-show .image-area img {
@@ -1793,8 +1793,7 @@ span.link, a.link {
           font-size: 1.5em; }
       #results #plants-list .plant-show .summary-area {
         margin: 1em 1em;
-        min-height: 15em;
-        height: auto; }
+        height: 15em; }
         #results #plants-list .plant-show .summary-area p {
           line-height: 1.4em;
           background: #dfffdd;
