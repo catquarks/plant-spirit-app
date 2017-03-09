@@ -7,7 +7,7 @@ export default function(props){
 		return(
 			<p>
 				No summary is currently available. In the meantime, try
-				&nbsp;{google(term)}&nbsp;
+				{google(term)}
 				for information and images.
 			</p>
 		)

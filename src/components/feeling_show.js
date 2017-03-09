@@ -6,7 +6,7 @@ export default function(props){
 	function noSummary(props){
 		return(
 			<span>
-				No summary is currently available. In the meantime, try&nbsp;
+				No summary is currently available. In the meantime, try
 				{google(props.name)} or {alleydog(props.name)}.
 			</span>
 		)
