@@ -40,7 +40,6 @@ class App extends Component {
         <NavBar handleModalClick={this.handleModalClick.bind(this)} />
         <div id="app-body">
           <WelcomeMessage />
-          <br />
           <FeelingForm />
           {this.props.currentFeeling.name ? <Results /> : null}
         </div>
