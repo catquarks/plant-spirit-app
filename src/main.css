@@ -1616,6 +1616,8 @@ span.link, a.link {
   cursor: pointer;
   padding-left: 5px;
   padding-right: 5px; }
+  span.link:hover, a.link:hover {
+    color: #00648c; }
 
 .about-app-modal, .about-creators-modal {
   font-size: 1.25rem;
@@ -1678,8 +1680,6 @@ span.link, a.link {
     margin: auto; }
   #welcome-message span.link {
     color: #42A5F5; }
-    #welcome-message span.link:hover {
-      color: #00648c; }
 
 /* FEELING FORM COMPONENT */
 #feeling-form {
