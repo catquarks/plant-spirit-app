@@ -78,7 +78,7 @@ span.link, a.link {
   z-index: 1;
 
   nav {
-    $background-color: #001027;
+    $background-color: $primary-color;
     margin: auto;
     border-radius: 4em 4em 4em 4em;
     background: $background-color url('images/leaf.jpg');
@@ -338,7 +338,8 @@ span.link, a.link {
   }
 
   #feeling-show {
-    width: 100%;
+    width: 96%;
+    margin: auto;
   }
 
 }

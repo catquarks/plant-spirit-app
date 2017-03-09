@@ -1643,7 +1643,7 @@ span.link, a.link {
   .navbar-fixed nav {
     margin: auto;
     border-radius: 4em 4em 4em 4em;
-    background: #001027 url("images/leaf.jpg");
+    background: #dfffdd url("images/leaf.jpg");
     opacity: 0.85; }
     .navbar-fixed nav .brand-logo {
       font-size: 1.5em; }
@@ -1815,4 +1815,5 @@ span.link, a.link {
     margin-left: 1em;
     margin-right: 1em; }
   #feeling-show {
-    width: 100%; } }
+    width: 96%;
+    margin: auto; } }
