@@ -1,22 +1,7 @@
 import React from 'react'
+import { google, alleydog } from './search_links'
 
 export default function(props){
-
-	function google(term){
-		return(
-			<a href={`https://www.google.com/#q=${term}`}
-				target="_blank"
-				>Google</a>
-		)
-	}
-
-	function alleydog(term){
-		return(
-			<a href={`https://www.alleydog.com/glossary/definition.php?term=${term}`}
-				target="_blank"
-				>AlleyDog</a>
-		)
-	}
 
 	function noSummary(props){
 		return(
