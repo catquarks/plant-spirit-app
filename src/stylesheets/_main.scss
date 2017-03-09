@@ -19,7 +19,6 @@ $button-color: rgba(0, 180, 180, 1) !default;
 
 body {
   background: $background-color;
-  margin-bottom: 15%;
   font-family: 'Arsenal', sans-serif;
   font-size: 1.4rem;
 }
@@ -115,9 +114,7 @@ span.link, a.link {
 
 #app-body {
   /*$background-color: #ddffff;*/
-  margin-top: 2em;
-  margin-left: 2em;
-  margin-right: 2em;
+  margin: 2em 2em 2em 2em;
   background: $tertiary-color;
   border-radius: 2em 2em;
 }
@@ -225,7 +222,16 @@ span.link, a.link {
       font-size: 1.5em;
     }
 
-    p {
+    pre {
+
+      font-family: inherit;
+
+      word-wrap: break-word;
+      white-space: pre-wrap;
+      white-space: -moz-pre-wrap;
+      white-space: -pre-wrap;
+      white-space: -o-pre-wrap;
+
       font-size: 1em;
       color: $text-color;
       margin-left: 0.7em;

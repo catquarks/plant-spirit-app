@@ -1604,7 +1604,6 @@
 
 body {
   background: #0097a7;
-  margin-bottom: 15%;
   font-family: 'Arsenal', sans-serif;
   font-size: 1.4rem; }
 
@@ -1664,9 +1663,7 @@ span.link, a.link {
 
 #app-body {
   /*$background-color: #ddffff;*/
-  margin-top: 2em;
-  margin-left: 2em;
-  margin-right: 2em;
+  margin: 2em 2em 2em 2em;
   background: #ccffff;
   border-radius: 2em 2em; }
 
@@ -1737,7 +1734,13 @@ span.link, a.link {
     #results #feeling-show h3 {
       text-align: center;
       font-size: 1.5em; }
-    #results #feeling-show p {
+    #results #feeling-show pre {
+      font-family: inherit;
+      word-wrap: break-word;
+      white-space: pre-wrap;
+      white-space: -moz-pre-wrap;
+      white-space: -pre-wrap;
+      white-space: -o-pre-wrap;
       font-size: 1em;
       color: #444444;
       margin-left: 0.7em;
