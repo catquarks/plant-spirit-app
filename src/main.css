@@ -1690,7 +1690,7 @@ span.link, a.link {
   text-align: center; }
   #feeling-form input[type=text] {
     color: #444444;
-    font-size: 1.7em;
+    font-size: 1.4em;
     text-align: center; }
     #feeling-form input[type=text]:focus {
       border-bottom: 1px solid rgba(0, 120, 70, 0.9);
