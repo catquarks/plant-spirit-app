@@ -4,7 +4,7 @@ Plant Spirit App is a meditation app, which recommends plant species to meditate
 
 [Click here for the Demo!](http://comfortcat.xyz/plant-spirit-demo/)
 
-This is the front-end repository. It is built with React + Redux, with Flexbox CSS and the Materialize library.
+This is the front-end repository. It is built with React + Redux, with Flexbox CSS and the Materialize library. It receives its data from a back-end whose repository can be found [here](https://github.com/catquarks/plant-spirit-admin).
 
 ## to do
 * add browser history
