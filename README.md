@@ -8,11 +8,11 @@ This is the front-end repository. It is built with React + Redux.
 
 ## to do
 * add browser history
-* format plant cards so text doesn't break them
-* create icons
 * teach api how to only fetch feelings according to app mode
 
 ## done
+* format plant cards so text doesn't break them
+* create icons
 * make 'about' component
 * get production build to source the actual api
 * figure out image storage solution
