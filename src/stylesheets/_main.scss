@@ -141,6 +141,10 @@ span.link, a.link {
 
   span.link {
     color: $link-color;
+
+    &:hover {
+      color: $link-hover-color;
+    }
   }
 }
 
