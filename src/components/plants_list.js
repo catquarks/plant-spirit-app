@@ -18,7 +18,12 @@ export default function(props){
 				</div>
 			{props.plants.map(plant => {
 				return(
-					<PlantShow key={plant.id} name={plant.name} summary={plant.summary} thumb={plant.thumb_pic} medium={plant.medium_pic} large={plant.large_pic} />
+					<PlantShow key={plant.id} name={plant.name}
+						summary={plant.summary}
+						currentFeelings={plant.current_feelings}
+						futureFeelings={plant.future_feelings}
+						thumb={plant.thumb_pic} medium={plant.medium_pic}
+						large={plant.large_pic} />
 				)
 			})}
 		</div>
