@@ -5,6 +5,7 @@ export default function(){
 		<div className="about-app-modal">
 			<h1>What Is Plant Spirit App?</h1>
 			<p>Plant Spirit App was created to help you ask for healing energy from plants. The specific plants in this app were chosen by intuitive seer, Reiki master, and friend of all plants, <a href="http://www.oluminousbeing.com/" target="_blank">Béthany</a>.</p>
+			<p>All images are sourced from free image websites, including <a href="https://pixabay.com" target="_blank">Pixabay</a>.</p>
 			<p>When the app "recommends" a plant, you can experience its healing energies and unique resonances with one of these techniques:</p>
 			<ul>
 				<li><strong>Meditation: </strong>People often meditate with each other to reinforce each other's focus and benefit more from the practice. Similarly, you can meditate with a plant. For guided meditations with plants, refer to <a href="http://www.oluminousbeing.com/recordings" target="_blank">these podcasts</a>.</li>
