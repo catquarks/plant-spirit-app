@@ -1801,7 +1801,10 @@ span.link, a.link {
           min-height: 100%;
           cursor: pointer; }
         #results #plants-list .plant-show .image-area .title {
-          font-size: 1.4em; }
+          font-weight: bold;
+          font-size: 1.4em;
+          padding: 0.3em;
+          margin: 0; }
       #results #plants-list .plant-show .summary-area {
         font-size: 0.9em;
         margin: 0.4em 0.4em;

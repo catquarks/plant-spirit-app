@@ -46,7 +46,6 @@ class FeelingForm extends React.Component {
 	filterFeeling(feeling){
 		if (feeling[this.props.appMode].length > 0){
 			return feeling.name.includes(this.state.query)
-
 		}
 	}
 
