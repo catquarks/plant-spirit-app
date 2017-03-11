@@ -23,6 +23,9 @@ body {
   font-size: 1.4rem;
 }
 
+h3 {
+  font-size: 1.4em;
+}
 
 p {
   font-size: 1.1em;
@@ -81,7 +84,7 @@ span.link, a.link {
   }
 
   h3 {
-    font-size: 1.5em;
+    font-size: 1.4em;
   }
 
   p {
@@ -120,7 +123,7 @@ span.link, a.link {
     opacity: 0.85;
 
     .brand-logo {
-      font-size: 1.5em;
+      font-size: 1.3em;
     }
 
     .nav-wrapper {
@@ -160,15 +163,9 @@ span.link, a.link {
 /* WELCOME MESSAGE COMPONENT */
 
 #welcome-message {
-  margin-left: 2.5em;
-  margin-right: 2.5em;
+  font-size: 1.1em;
   text-align: center;
-
-  p {
-    background: inherit;
-    padding: 1.5em;
-    margin: auto;
-  }
+  padding: 1.1em;
 
   span.link {
     color: $link-color;
@@ -186,10 +183,11 @@ span.link, a.link {
 
 #feeling-form {
   margin: auto;
-  width: 80%;
+  width: 100%;
   text-align: center;
 
   input[type=text] {
+    width: 21em;
     color: $text-color;
     font-size: 1.4em;
     text-align: center;
@@ -237,7 +235,7 @@ span.link, a.link {
 
   h3 {
     color: $small-title;
-    padding: 0.4em;
+    padding: 0.2em;
   }
 
 
@@ -254,7 +252,6 @@ span.link, a.link {
 
     h3 {
       text-align: center;
-      font-size: 1.5em;
     }
   }
 
@@ -281,7 +278,6 @@ span.link, a.link {
       h3 {
         border-radius: 3em 2em;
         text-align: center;
-        font-size: 1.5em;
         display: block;
         margin: auto;
         min-width: 5em;
@@ -314,7 +310,7 @@ span.link, a.link {
         }
 
         .title {
-          font-size: 1.5em;
+          font-size: 1.4em;
         }
       }
 
@@ -392,6 +388,16 @@ span.link, a.link {
   body {
     font-size: 4vw;
   }
+
+  #feeling-form {
+    width: 100%;
+
+    input[type=text] {
+      font-size: 0.9em;
+      width: 18em;
+    }
+  }
+
 
   #welcome-message {
     margin: auto;

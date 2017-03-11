@@ -6,7 +6,6 @@ import Image from './image'
 
 
 function ModalCloseButton(props){
-
   return(
     <div style={{textAlign: 'center'}} >
       <button onClick={props.closeModal} className="btn">

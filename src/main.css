@@ -1607,6 +1607,9 @@ body {
   font-family: 'Arsenal', sans-serif;
   font-size: 1.4rem; }
 
+h3 {
+  font-size: 1.4em; }
+
 p {
   font-size: 1.1em;
   line-height: 2em;
@@ -1648,7 +1651,7 @@ span.link, a.link {
   .about-app-modal h1, .about-creators-modal h1 {
     font-size: 2em; }
   .about-app-modal h3, .about-creators-modal h3 {
-    font-size: 1.5em; }
+    font-size: 1.4em; }
   .about-app-modal p, .about-creators-modal p {
     line-height: 1.25em; }
   .about-app-modal strong, .about-creators-modal strong {
@@ -1670,7 +1673,7 @@ span.link, a.link {
     background: rgba(0, 120, 70, 0.9) url("images/leaf.jpg");
     opacity: 0.85; }
     .navbar-fixed nav .brand-logo {
-      font-size: 1.5em; }
+      font-size: 1.3em; }
     .navbar-fixed nav .nav-wrapper {
       padding-left: 1em;
       padding-right: 1em; }
@@ -1693,13 +1696,9 @@ span.link, a.link {
 
 /* WELCOME MESSAGE COMPONENT */
 #welcome-message {
-  margin-left: 2.5em;
-  margin-right: 2.5em;
-  text-align: center; }
-  #welcome-message p {
-    background: inherit;
-    padding: 1.5em;
-    margin: auto; }
+  font-size: 1.1em;
+  text-align: center;
+  padding: 1.1em; }
   #welcome-message span.link {
     color: #42A5F5; }
     #welcome-message span.link:hover {
@@ -1708,9 +1707,10 @@ span.link, a.link {
 /* FEELING FORM COMPONENT */
 #feeling-form {
   margin: auto;
-  width: 80%;
+  width: 100%;
   text-align: center; }
   #feeling-form input[type=text] {
+    width: 21em;
     color: #444444;
     font-size: 1.4em;
     text-align: center; }
@@ -1746,7 +1746,7 @@ span.link, a.link {
   /* FLEXBOX CHILDREN: FEELING SHOW COMPONENT, PLANT LIST TITLE COMPONENT, AND PLANTS LIST COMPONENT */ }
   #results h3 {
     color: #f0f0f0;
-    padding: 0.4em; }
+    padding: 0.2em; }
   #results #feeling-show {
     height: auto;
     color: #444444;
@@ -1756,8 +1756,7 @@ span.link, a.link {
     margin-left: auto;
     margin-right: auto; }
     #results #feeling-show h3 {
-      text-align: center;
-      font-size: 1.5em; }
+      text-align: center; }
   #results #plants-list {
     /*width: 39em;*/
     flex-basis: 39em;
@@ -1778,7 +1777,6 @@ span.link, a.link {
       #results #plants-list #plant-list-title h3 {
         border-radius: 3em 2em;
         text-align: center;
-        font-size: 1.5em;
         display: block;
         margin: auto;
         min-width: 5em;
@@ -1803,7 +1801,7 @@ span.link, a.link {
           min-height: 100%;
           cursor: pointer; }
         #results #plants-list .plant-show .image-area .title {
-          font-size: 1.5em; }
+          font-size: 1.4em; }
       #results #plants-list .plant-show .summary-area {
         font-size: 0.9em;
         margin: 0.4em 0.4em;
@@ -1849,6 +1847,11 @@ span.link, a.link {
 @media only screen and (max-width: 700px) {
   body {
     font-size: 4vw; }
+  #feeling-form {
+    width: 100%; }
+    #feeling-form input[type=text] {
+      font-size: 0.9em;
+      width: 18em; }
   #welcome-message {
     margin: auto; }
   #app-body {
