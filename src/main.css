@@ -1667,7 +1667,7 @@ span.link, a.link {
   .navbar-fixed nav {
     margin: auto;
     border-radius: 4em 4em 4em 4em;
-    background: #dfffdd url("images/leaf.jpg");
+    background: rgba(0, 120, 70, 0.9) url("images/leaf.jpg");
     opacity: 0.85; }
     .navbar-fixed nav .brand-logo {
       font-size: 1.5em; }
