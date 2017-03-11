@@ -18,9 +18,7 @@ function ModalCloseButton(props){
 
 export default function(props){
 
-
   function getCustomStyles(){
-
     if (props.currentModal === 'image'){
       return({
         maxWidth: '100%'

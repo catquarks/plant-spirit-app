@@ -337,6 +337,7 @@ span.link, a.link {
           }
 
           .feeling-group {
+            margin: auto;
             font-size: 0.9em;
             line-height: 1.3em;
             width: 100%;
@@ -349,6 +350,7 @@ span.link, a.link {
 
             .feelings-list {
               width: 50%;
+              text-align: center;
 
               strong {
                 font-weight: bold;
@@ -359,6 +361,8 @@ span.link, a.link {
                 margin: 0.3em;
 
                 li {
+                  color:rgb(80, 135, 80);
+                  border-bottom: dotted 1px rgba(80, 135, 80, 0.3);
                   font-style: italic;
                   word-wrap: break-word;
                   white-space: pre-wrap;

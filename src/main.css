@@ -1819,6 +1819,7 @@ span.link, a.link {
             margin: none;
             line-height: 1.2em; }
           #results #plants-list .plant-show .summary-area .summary-area-child .feeling-group {
+            margin: auto;
             font-size: 0.9em;
             line-height: 1.3em;
             width: 100%;
@@ -1828,13 +1829,16 @@ span.link, a.link {
             flex-wrap: wrap;
             justify-content: space-around; }
             #results #plants-list .plant-show .summary-area .summary-area-child .feeling-group .feelings-list {
-              width: 50%; }
+              width: 50%;
+              text-align: center; }
               #results #plants-list .plant-show .summary-area .summary-area-child .feeling-group .feelings-list strong {
                 font-weight: bold; }
               #results #plants-list .plant-show .summary-area .summary-area-child .feeling-group .feelings-list ul {
                 padding: 0;
                 margin: 0.3em; }
                 #results #plants-list .plant-show .summary-area .summary-area-child .feeling-group .feelings-list ul li {
+                  color: #508750;
+                  border-bottom: dotted 1px rgba(80, 135, 80, 0.3);
                   font-style: italic;
                   word-wrap: break-word;
                   white-space: pre-wrap;
