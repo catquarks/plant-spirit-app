@@ -387,7 +387,7 @@ span.link, a.link {
     width: 100%;
 
     input[type=text] {
-      font-size: 0.9em;
+      font-size: 1em;
       width: 18em;
     }
   }
@@ -395,6 +395,7 @@ span.link, a.link {
 
   #welcome-message {
     margin: auto;
+    font-size: 1em;
   }
 
   #app-body {

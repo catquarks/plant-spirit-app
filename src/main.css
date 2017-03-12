@@ -1850,10 +1850,11 @@ span.link, a.link {
   #feeling-form {
     width: 100%; }
     #feeling-form input[type=text] {
-      font-size: 0.9em;
+      font-size: 1em;
       width: 18em; }
   #welcome-message {
-    margin: auto; }
+    margin: auto;
+    font-size: 1em; }
   #app-body {
     margin-top: 2em;
     margin-left: 1em;
