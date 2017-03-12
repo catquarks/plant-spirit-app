@@ -1,21 +1,28 @@
 import React from 'react'
 import { google, alleydog } from './search_links'
 
+function Summary(props){
+	return(
+		<pre>
+			{props.summary}
+		</pre>
+	)
+}
+
+function NoSummary(props){
+	return(
+		<pre>
+			No summary is currently available. In the meantime, try
+			{google(props.name)} or {alleydog(props.name)}.
+		</pre>
+	)
+}
+
 export default function(props){
-
-	function noSummary(props){
-		return(
-			<span>
-				No summary is currently available. In the meantime, try
-				{google(props.name)} or {alleydog(props.name)}.
-			</span>
-		)
-	}
-
 	return(
 		<div id="feeling-show">
 			<h3>{props.name}</h3>
-			<pre>{props.summary ? props.summary : noSummary(props)}</pre>
+			{props.summary ? <Summary summary={props.summary} /> : <NoSummary name={props.name} />}
 		</div>
 	)
 }

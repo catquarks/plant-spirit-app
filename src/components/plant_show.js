@@ -51,13 +51,12 @@ class PlantShow extends Component {
           closeModal={closeModal.bind(this)}
           imageSrc={this.state.imageSrc}
           imageName={this.state.imageName}
-          currentModal={this.state.currentModal} />
+          currentModal={this.state.currentModal}
+        />
         <ImageArea name={this.props.name} large={this.props.large} thisForModal={this} />
 				<div className="summary-area">
 					<div className="summary-area-child">
-
 						{this.props.summary ? <Summary /> : <NoSummary term={this.props.name} />}
-
 						<div className="feeling-group">
 							<FeelingsList title='Promotes:'
 								feelings={this.props.futureFeelings}
@@ -70,7 +69,6 @@ class PlantShow extends Component {
 				</div>
 			</div>
 		)
- 	
   }
 }
 
