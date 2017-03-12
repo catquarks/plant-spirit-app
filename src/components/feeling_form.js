@@ -24,7 +24,8 @@ class FeelingForm extends React.Component {
 	constructor(props){
 		super(props)
 		this.state = {
-			query: ''
+			query: '',
+			placeholder: 'search here'
 		}
 
 		this.handleChange = this.handleChange.bind(this)
@@ -57,7 +58,10 @@ class FeelingForm extends React.Component {
 		const queriedFeeling = this.getQueriedFeeling()
 
 		if (queriedFeeling === undefined){
-			alert('Is there another way to describe your feeling?')
+			this.setState({
+				placeholder: 'Is there another way to describe your feeling?'
+			})
+
 		} else {
 			this.props.actions.fetchPlants(
 				queriedFeeling.name, this.props.appMode
@@ -77,7 +81,11 @@ class FeelingForm extends React.Component {
 		return(
 			<div id="feeling-form">
 	     	<form onSubmit={this.handleSubmit}>
-	        <input type="text" list="feelings" name="feeling" value={this.state.query} onChange={this.handleChange} autoFocus />
+	        <input type="text" list="feelings" name="feeling"
+	        	value={this.state.query} onChange={this.handleChange}
+	        	placeholder={this.state.placeholder}
+	        	autoFocus
+        	/>
 	        <FeelingDataList feelings={this.props.feelings} appMode={this.props.appMode} filterFeeling={this.filterFeeling.bind(this)} />
 	        <Button label='Submit' style={{'display': 'inline'}} />
 	      </form>
