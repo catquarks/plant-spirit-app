@@ -1,21 +1,30 @@
 import React from 'react'
 import PlantShow from './plant_show'
 
+
+function PlantRoleTitle(props){
+	if (props.appMode === 'easing_plants'){
+		return(
+			<div id="plant-list-title">
+				<h3>Plants that help with this feeling:</h3>
+			</div>
+		)
+	} else {
+		return(
+			<div id="plant-list-title">
+				<h3>Plants that encourage this feeling:</h3>
+			</div>
+		)
+	}
+}
+
 export default function(props){
 	
-	function introducePlantRole(){
-		if (props.appMode === 'easing_plants'){
-			return "Plants that help with this feeling:"
-		} else {
-			return "Plants that encourage this feeling:"
-		}
-	}
 
 	return(
 		<div id="plants-list">
-				<div id="plant-list-title">
-					<h3>{introducePlantRole()}</h3>
-				</div>
+			<PlantRoleTitle appMode={props.appMode} />
+				
 			{props.plants.map(plant => {
 				return(
 					<PlantShow key={plant.id} name={plant.name}
@@ -26,6 +35,7 @@ export default function(props){
 						large={plant.large_pic} />
 				)
 			})}
+
 		</div>
 	)
 }
