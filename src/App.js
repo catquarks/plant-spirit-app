@@ -5,6 +5,7 @@ import FeelingForm from './components/feeling_form'
 import WelcomeMessage from './components/welcome_message'
 import Results from './components/results'
 import Modal from './components/modal'
+import { closeModal, handleModalClick } from './components/modal_functions'
 
 import 'materialize-css/bin/materialize.js'
 import 'materialize-css/bin/materialize.css'
@@ -18,26 +19,13 @@ class App extends Component {
     }
   }
 
-  handleModalClick(modal){
-    this.setState({
-      modalIsOpen: true,
-      currentModal: modal
-    })
-  }
-
-  closeModal(){
-    this.setState({
-      modalIsOpen: false
-    })
-  }
-
   render() {
     return (
       <div id="app">
         <Modal modalIsOpen={this.state.modalIsOpen}
-          closeModal={this.closeModal.bind(this)}
+          closeModal={closeModal.bind(this)}
           currentModal={this.state.currentModal} />
-        <NavBar handleModalClick={this.handleModalClick.bind(this)} />
+        <NavBar handleModalClick={handleModalClick.bind(this)} />
         <div id="app-body">
           <WelcomeMessage />
           <FeelingForm />

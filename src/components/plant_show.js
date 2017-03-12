@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { google } from './search_links'
 import Modal from './modal'
 import FeelingsList from './feelings_list'
+import { closeModal, handleModalClick } from './modal_functions'
 
 class PlantShow extends Component {
 	constructor(props){
@@ -30,26 +31,11 @@ class PlantShow extends Component {
 		)
 	}
 
-  handleModalClick(currentModal, imageSrc, imageName){
-    this.setState({
-      modalIsOpen: true,
-      currentModal: currentModal,
-      imageSrc: imageSrc,
-      imageName: imageName
-    })
-  }
-
-  closeModal(){
-    this.setState({
-      modalIsOpen: false
-    })
-  }
-
   render(){
 		return(
 			<div className="card plant-show">
 				<Modal modalIsOpen={this.state.modalIsOpen}
-          closeModal={this.closeModal.bind(this)}
+          closeModal={closeModal.bind(this)}
           imageSrc={this.state.imageSrc}
           imageName={this.state.imageName}
           currentModal={this.state.currentModal} />
@@ -57,7 +43,7 @@ class PlantShow extends Component {
 					<img src={this.props.large} target="_blank"
 						alt={this.props.name} 
 						onClick={ () => {
-							this.handleModalClick('image', this.props.large, this.props.name)
+							handleModalClick.call(this, 'image', this.props.large, this.props.name)
 						}} />
 					<span className="card-title title">{this.props.name}</span>
 				</div>
