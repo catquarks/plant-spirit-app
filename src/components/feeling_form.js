@@ -44,10 +44,14 @@ class FeelingForm extends React.Component {
 		)
 	}
 
+	resetQuery(){
+		this.setState({query: ''})
+	}
+
 	handleSubmit(e){
 		e.preventDefault();
 		e.stopPropagation();
-		this.setState({query: ''})
+		this.resetQuery()
 
 		const queriedFeeling = this.getCurrentFeeling()
 
