@@ -10,7 +10,9 @@ function ImageArea(props){
 			<img src={props.large} target="_blank"
 				alt={props.name} 
 				onClick={ () => {
-					handleModalClick.call(props.thisForModal, 'image', props.large, props.name)
+					handleModalClick.call(
+						props.thisForModal, 'image', props.large, props.name
+					)
 				}} />
 			<span className="card-title title">{props.name}</span>
 		</div>
