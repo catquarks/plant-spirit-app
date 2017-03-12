@@ -74,6 +74,12 @@ class FeelingForm extends React.Component {
 		}
 	}
 
+	handleBlur(){
+		this.setState({
+			placeholder: 'search here'
+		})
+	}
+
 	filterFeeling(feeling){
 		if (feeling[this.props.appMode].length > 0){
 			return feeling.name.includes(this.state.query)
@@ -87,9 +93,13 @@ class FeelingForm extends React.Component {
 	        <input type="text" list="feelings" name="feeling"
 	        	value={this.state.query} onChange={this.handleChange}
 	        	placeholder={this.state.placeholder}
+	        	onBlur={this.handleBlur.bind(this)}
 	        	autoFocus
         	/>
-	        <FeelingDataList feelings={this.props.feelings} appMode={this.props.appMode} filterFeeling={this.filterFeeling.bind(this)} />
+	        <FeelingDataList feelings={this.props.feelings}
+	        	appMode={this.props.appMode}
+	        	filterFeeling={this.filterFeeling.bind(this)}
+        	/>
 	        <Button label='Submit' style={{'display': 'inline'}} />
 	      </form>
       </div>
