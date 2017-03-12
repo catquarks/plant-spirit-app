@@ -27,10 +27,10 @@ function NoSummary(props){
 	)
 }
 
-function Summary(){
+function Summary(props){
 	return(
 		<p>
-			{this.props.summary}
+			{props.summary}
 		</p>
 	)
 }
@@ -56,7 +56,7 @@ class PlantShow extends Component {
         <ImageArea name={this.props.name} large={this.props.large} thisForModal={this} />
 				<div className="summary-area">
 					<div className="summary-area-child">
-						{this.props.summary ? <Summary /> : <NoSummary term={this.props.name} />}
+						{this.props.summary ? <Summary summary={this.props.summary} /> : <NoSummary term={this.props.name} />}
 						<div className="feeling-group">
 							<FeelingsList title='Promotes:'
 								feelings={this.props.futureFeelings}
