@@ -1,7 +1,8 @@
 import React from 'react'
 import * as actions from '../actions'
-import {bindActionCreators} from 'redux'
-import {connect} from 'react-redux'
+import { bindActionCreators } from 'redux'
+import { connect } from 'react-redux'
+import Button from './button'
 
 function FeelingDataList(props){
 	return(
@@ -36,7 +37,7 @@ class FeelingForm extends React.Component {
 		})
 	}
 
-	getCurrentFeeling(){
+	getQueriedFeeling(){
 		return this.props.feelings.find(
 			feeling => {
 				return feeling.name.toLowerCase() === this.state.query
@@ -53,7 +54,7 @@ class FeelingForm extends React.Component {
 		e.stopPropagation();
 		this.resetQuery()
 
-		const queriedFeeling = this.getCurrentFeeling()
+		const queriedFeeling = this.getQueriedFeeling()
 
 		if (queriedFeeling === undefined){
 			alert('Is there another way to describe your feeling?')
@@ -78,9 +79,7 @@ class FeelingForm extends React.Component {
 	     	<form onSubmit={this.handleSubmit}>
 	        <input type="text" list="feelings" name="feeling" value={this.state.query} onChange={this.handleChange} autoFocus />
 	        <FeelingDataList feelings={this.props.feelings} appMode={this.props.appMode} filterFeeling={this.filterFeeling.bind(this)} />
-	        <button className="waves-effect waves-light btn">
-	        	Submit
-        	</button>
+	        <Button label='Submit' style={{'display': 'inline'}} />
 	      </form>
       </div>
 		)
