@@ -4,13 +4,6 @@ export function closeModal(){
   })
 }
 
-// export function handleModalClick(modal){
-//   this.setState({
-//     modalIsOpen: true,
-//     currentModal: modal
-//   })
-// }
-
 export function handleModalClick(currentModal, imageSrc=null, imageName=null){
   this.setState({
     modalIsOpen: true,

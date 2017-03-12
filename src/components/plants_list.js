@@ -19,7 +19,6 @@ function PlantRoleTitle(props){
 }
 
 export default function(props){
-	
 
 	return(
 		<div id="plants-list">
@@ -35,7 +34,6 @@ export default function(props){
 						large={plant.large_pic} />
 				)
 			})}
-
 		</div>
 	)
 }
