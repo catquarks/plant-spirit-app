@@ -1712,11 +1712,25 @@ span.link, a.link {
   #feeling-form input[type=text] {
     width: 21em;
     color: #444444;
-    font-size: 1.4em;
+    font-size: 1.2em;
     text-align: center; }
     #feeling-form input[type=text]:focus {
       border-bottom: 1px solid rgba(0, 120, 70, 0.9);
       box-shadow: 0 1px 0 0 #dfffdd; }
+  #feeling-form ::-webkit-input-placeholder {
+    /* Chrome */
+    color: rgba(0, 20, 100, 0.2); }
+  #feeling-form :-ms-input-placeholder {
+    /* IE 10+ */
+    color: rgba(0, 20, 100, 0.2); }
+  #feeling-form ::-moz-placeholder {
+    /* Firefox 19+ */
+    color: rgba(0, 20, 100, 0.2);
+    opacity: 1; }
+  #feeling-form :-moz-placeholder {
+    /* Firefox 4 - 18 */
+    color: rgba(0, 20, 100, 0.2);
+    opacity: 1; }
   #feeling-form button {
     z-index: 0; }
 

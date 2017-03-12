@@ -47,7 +47,10 @@ class FeelingForm extends React.Component {
 	}
 
 	resetQuery(){
-		this.setState({query: ''})
+		this.setState({
+			query: '',
+			placeholder: 'search here'
+		})
 	}
 
 	handleSubmit(e){
