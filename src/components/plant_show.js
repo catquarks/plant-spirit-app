@@ -41,7 +41,7 @@ class PlantShow extends Component {
           imageName={this.state.imageName}
           currentModal={this.state.currentModal}
         />
-        <PlantImageArea name={this.props.name} large={this.props.large} thisForModal={this} handleModalClick={handleModalClick.bind(this)} />
+        <PlantImageArea name={this.props.name} large={this.props.large} handleModalClick={handleModalClick.bind(this)} />
 				<div className="summary-area">
 					<div className="summary-area-child">
 						{this.props.summary ? <PlantSummary summary={this.props.summary} /> : <PlantNoSummary term={this.props.name} />}
