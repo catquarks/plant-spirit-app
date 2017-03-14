@@ -28,7 +28,7 @@ class WelcomeMessage extends Component {
 		return(
 			<div id="welcome-message">
 				{this.outputWelcomeMessage()}
-				<span className="link" onClick={this.handleToggleAppMode}> (Click to Switch Modes)</span>
+				<span className="link" onClick={this.handleToggleAppMode}>&nbsp;(Click to Switch Modes)</span>
 			</div>
 		)
 	}

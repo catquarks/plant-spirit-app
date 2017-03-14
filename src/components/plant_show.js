@@ -22,9 +22,9 @@ function ImageArea(props){
 function NoSummary(props){
 	return(
 		<p>
-			No summary is currently available. In the meantime, try
+			No summary is currently available. In the meantime, try&nbsp;
 			<GoogleLink term={props.term} />
-			for information and images.
+			&nbsp;for information and images.
 		</p>
 	)
 }

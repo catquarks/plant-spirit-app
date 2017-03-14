@@ -12,9 +12,9 @@ function Summary(props){
 function NoSummary(props){
 	return(
 		<pre>
-			No summary is currently available. In the meantime, try
+			No summary is currently available. In the meantime, try&nbsp;
 			<GoogleLink term={props.name} />
-			or
+			&nbsp;or&nbsp;
 			<AlleyDogLink term={props.name} />
 		</pre>
 	)

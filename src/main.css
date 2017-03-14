@@ -1632,9 +1632,7 @@ pre {
   line-height: 1.4em; }
 
 span.link, a.link {
-  cursor: pointer;
-  padding-left: 0.3em;
-  padding-right: 0.3em; }
+  cursor: pointer; }
   span.link:hover, a.link:hover {
     color: #00648c; }
 
