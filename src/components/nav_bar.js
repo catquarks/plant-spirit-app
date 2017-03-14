@@ -24,12 +24,8 @@ export default function(props){
 		      <a href="#!" className="brand-logo left">
 		      	Plant Spirit App
 	      	</a>
-
 		    </div>
 		  </nav>
 	  </div>
-
 	)
-
 }
-
