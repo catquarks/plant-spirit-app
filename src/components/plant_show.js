@@ -3,21 +3,7 @@ import { GoogleLink } from './search_links'
 import Modal from './modal'
 import FeelingsList from './feelings_list'
 import { closeModal, handleModalClick } from './modal_functions'
-
-function ImageArea(props){
-	return(
-		<div className="image-area card-image">
-			<img src={props.large} target="_blank"
-				alt={props.name} 
-				onClick={ () => {
-					handleModalClick.call(
-						props.thisForModal, 'image', props.large, props.name
-					)
-				}} />
-			<span className="card-title title">{props.name}</span>
-		</div>
-	)
-}
+import PlantImageArea from './plant_image_area'
 
 function NoSummary(props){
 	return(
@@ -55,7 +41,7 @@ class PlantShow extends Component {
           imageName={this.state.imageName}
           currentModal={this.state.currentModal}
         />
-        <ImageArea name={this.props.name} large={this.props.large} thisForModal={this} />
+        <PlantImageArea name={this.props.name} large={this.props.large} thisForModal={this} handleModalClick={handleModalClick.bind(this)} />
 				<div className="summary-area">
 					<div className="summary-area-child">
 						{this.props.summary ? <Summary summary={this.props.summary} /> : <NoSummary term={this.props.name} />}
