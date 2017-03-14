@@ -1,5 +1,5 @@
 import React from 'react'
-import { google, alleydog } from './search_links'
+import { GoogleLink, AlleyDogLink } from './search_links'
 
 function Summary(props){
 	return(
@@ -13,7 +13,9 @@ function NoSummary(props){
 	return(
 		<pre>
 			No summary is currently available. In the meantime, try
-			{google(props.name)} or {alleydog(props.name)}.
+			<GoogleLink term={props.name} />
+			or
+			<AlleyDogLink term={props.name} />
 		</pre>
 	)
 }

@@ -9,10 +9,10 @@ import React from 'react'
 		)
 	}
 
-	export function google(term){
-		return createSearchLink("https://www.google.com/#q=", term, "Google")
+	export function GoogleLink(props){
+		return createSearchLink("https://www.google.com/#q=", props.term, "Google")
 	}
 
-	export function alleydog(term){
-		return createSearchLink("https://www.alleydog.com/glossary/definition.php?term=", term, "AlleyDog")
+	export function AlleyDogLink(props){
+		return createSearchLink("https://www.alleydog.com/glossary/definition.php?term=", props.term, "AlleyDog")
 	}

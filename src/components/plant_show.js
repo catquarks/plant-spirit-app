@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { google } from './search_links'
+import { GoogleLink } from './search_links'
 import Modal from './modal'
 import FeelingsList from './feelings_list'
 import { closeModal, handleModalClick } from './modal_functions'
@@ -23,7 +23,7 @@ function NoSummary(props){
 	return(
 		<p>
 			No summary is currently available. In the meantime, try
-			{ google(props.term) }
+			<GoogleLink term={props.term} />
 			for information and images.
 		</p>
 	)
