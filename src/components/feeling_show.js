@@ -1,7 +1,7 @@
 import React from 'react'
 import { GoogleLink, AlleyDogLink } from './search_links'
 
-function Summary(props){
+function FeelingSummary(props){
 	return(
 		<pre>
 			{props.summary}
@@ -9,7 +9,7 @@ function Summary(props){
 	)
 }
 
-function NoSummary(props){
+function FeelingNoSummary(props){
 	return(
 		<pre>
 			No summary is currently available. In the meantime, try&nbsp;
@@ -24,7 +24,7 @@ export default function(props){
 	return(
 		<div id="feeling-show">
 			<h3>{props.name}</h3>
-			{props.summary ? <Summary summary={props.summary} /> : <NoSummary name={props.name} />}
+			{props.summary ? <FeelingSummary summary={props.summary} /> : <FeelingNoSummary name={props.name} />}
 		</div>
 	)
 }

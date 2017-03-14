@@ -5,7 +5,7 @@ import FeelingsList from './feelings_list'
 import { closeModal, handleModalClick } from './modal_functions'
 import PlantImageArea from './plant_image_area'
 
-function NoSummary(props){
+function PlantNoSummary(props){
 	return(
 		<p>
 			No summary is currently available. In the meantime, try&nbsp;
@@ -15,7 +15,7 @@ function NoSummary(props){
 	)
 }
 
-function Summary(props){
+function PlantSummary(props){
 	return(
 		<p>
 			{props.summary}
@@ -44,7 +44,7 @@ class PlantShow extends Component {
         <PlantImageArea name={this.props.name} large={this.props.large} thisForModal={this} handleModalClick={handleModalClick.bind(this)} />
 				<div className="summary-area">
 					<div className="summary-area-child">
-						{this.props.summary ? <Summary summary={this.props.summary} /> : <NoSummary term={this.props.name} />}
+						{this.props.summary ? <PlantSummary summary={this.props.summary} /> : <PlantNoSummary term={this.props.name} />}
 						<div className="feeling-group">
 							<FeelingsList title='Promotes:'
 								feelings={this.props.futureFeelings}
