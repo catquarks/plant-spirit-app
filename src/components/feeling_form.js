@@ -3,22 +3,7 @@ import * as actions from '../actions'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import Button from './button'
-
-function FeelingDataList(props){
-	return(
-    <datalist id="feelings">
-			{props.feelings.filter(feeling => {
-				return props.filterFeeling(feeling)
-			})
-				.map(feeling => {
-					return(
-						<option key={feeling.id} value={feeling.name} />
-					)
-				})
-			}
-    </datalist>
-	)
-}
+import FeelingDatalist from './feeling_datalist'
 
 class FeelingForm extends React.Component {
 	constructor(props){
@@ -96,7 +81,7 @@ class FeelingForm extends React.Component {
 	        	onBlur={this.handleBlur.bind(this)}
 	        	autoFocus
         	/>
-	        <FeelingDataList feelings={this.props.feelings}
+	        <FeelingDatalist feelings={this.props.feelings}
 	        	appMode={this.props.appMode}
 	        	filterFeeling={this.filterFeeling.bind(this)}
         	/>
