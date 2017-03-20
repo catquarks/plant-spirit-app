@@ -1,7 +1,6 @@
 import React from 'react'
 import PlantShow from './plant_show'
 
-
 function PlantRoleTitle(props){
 	if (props.appMode === 'easing_plants'){
 		return(

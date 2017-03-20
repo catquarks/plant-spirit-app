@@ -4,6 +4,7 @@ import Modal from './modal'
 import FeelingsList from './feelings_list'
 import { closeModal, handleModalClick } from './modal_functions'
 import PlantImageArea from './plant_image_area'
+import ImageCredit from './image_credit'
 
 function PlantNoSummary(props){
 	return(
@@ -21,27 +22,6 @@ function PlantSummary(props){
 			{props.summary}
 		</p>
 	)
-}
-
-function ImageCredit(props){
-	if (props.desc){
-		return(
-			<div>
-				Image credit: {props.desc} /
-				<a href={props.url}
-					target="_blank"
-				>
-					link
-				</a>
-			</div>
-		)
-	} else {
-		return(
-			<div>
-				<em>No image credit is available.</em>
-			</div>
-		)
-	}
 }
 
 class PlantShow extends Component {
@@ -62,7 +42,11 @@ class PlantShow extends Component {
           imageName={this.state.imageName}
           currentModal={this.state.currentModal}
         />
-        <PlantImageArea name={this.props.name} large={this.props.large} handleModalClick={handleModalClick.bind(this)} />
+        <PlantImageArea
+        	name={this.props.name}
+        	large={this.props.large}
+        	handleModalClick={handleModalClick.bind(this)}
+      	/>
 				<div className="summary-area">
 					<div className="summary-area-child">
 						{this.props.summary ? <PlantSummary summary={this.props.summary} /> : <PlantNoSummary term={this.props.name} />}

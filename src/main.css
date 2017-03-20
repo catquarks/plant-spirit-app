@@ -1615,6 +1615,9 @@ p {
   line-height: 2em;
   color: #444444; }
 
+strong {
+  font-weight: bold; }
+
 pre {
   font-family: inherit;
   word-wrap: break-word;
@@ -1652,8 +1655,6 @@ span.link, a.link {
     font-size: 1.4em; }
   .about-app-modal p, .about-creators-modal p {
     line-height: 1.25em; }
-  .about-app-modal strong, .about-creators-modal strong {
-    font-weight: bold; }
   .about-app-modal ul, .about-creators-modal ul {
     list-style-type: circle; }
     .about-app-modal ul li, .about-creators-modal ul li {
@@ -1816,6 +1817,9 @@ span.link, a.link {
           font-size: 1.4em;
           padding: 0.3em;
           margin: 0; }
+      #results #plants-list .plant-show .image-credit {
+        margin: 1em;
+        opacity: 0.9; }
       #results #plants-list .plant-show .summary-area {
         font-size: 0.9em;
         margin: 0.4em 0.4em;
@@ -1843,8 +1847,6 @@ span.link, a.link {
             #results #plants-list .plant-show .summary-area .summary-area-child .feeling-group .feelings-list {
               width: 50%;
               text-align: center; }
-              #results #plants-list .plant-show .summary-area .summary-area-child .feeling-group .feelings-list strong {
-                font-weight: bold; }
               #results #plants-list .plant-show .summary-area .summary-area-child .feeling-group .feelings-list ul {
                 padding: 0;
                 margin: 0.3em; }

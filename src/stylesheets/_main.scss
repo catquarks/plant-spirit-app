@@ -33,6 +33,9 @@ p {
   color: $text-color;
 }
 
+strong {
+  font-weight: bold;
+}
 
 pre {
 
@@ -87,10 +90,6 @@ span.link, a.link {
 
   p {
     line-height: 1.25em;
-  }
-
-  strong {
-    font-weight: bold;
   }
 
   ul {
@@ -331,6 +330,11 @@ span.link, a.link {
         }
       }
 
+      .image-credit {
+        margin: 1em;
+        opacity: 0.9;
+      }
+
       .summary-area {
         font-size: 0.9em;
         margin: 0.4em 0.4em;
@@ -364,10 +368,6 @@ span.link, a.link {
             .feelings-list {
               width: 50%;
               text-align: center;
-
-              strong {
-                font-weight: bold;
-              }
 
               ul {
                 padding: 0;
