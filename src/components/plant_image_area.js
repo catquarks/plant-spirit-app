@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function PlantImageArea(props){
+export default function(props){
 	return(
 		<div className="image-area card-image">
 			<img src={props.large} target="_blank"
@@ -9,7 +9,9 @@ export default function PlantImageArea(props){
 					props.handleModalClick('image', props.large, props.name
 					)
 				}} />
-			<span className="card-title title">{props.name}</span>
+			<span className="card-title title">
+				{props.name}
+			</span>
 		</div>
 	)
 }
