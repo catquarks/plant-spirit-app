@@ -171,6 +171,10 @@ span.link, a.link {
     &:hover {
       color: $link-hover-color;
     }
+
+    &:active {
+      color: rgb(150, 210, 256);
+    }
   }
 }
 

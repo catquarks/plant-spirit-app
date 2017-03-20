@@ -1701,6 +1701,8 @@ span.link, a.link {
     color: #42A5F5; }
     #welcome-message span.link:hover {
       color: #00648c; }
+    #welcome-message span.link:active {
+      color: #96d2ff; }
 
 /* FEELING FORM COMPONENT */
 #feeling-form {
