@@ -17,7 +17,7 @@ export default function(props){
 		)
 	} else {
 		return(
-			<div>
+			<div className="image-credit">
 				<em>No image credit is available.</em>
 			</div>
 		)
