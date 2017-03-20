@@ -19,7 +19,6 @@ function PlantRoleTitle(props){
 }
 
 export default function(props){
-
 	return(
 		<div id="plants-list">
 			<PlantRoleTitle appMode={props.appMode} />
@@ -30,8 +29,12 @@ export default function(props){
 						summary={plant.summary}
 						currentFeelings={plant.current_feelings}
 						futureFeelings={plant.future_feelings}
-						thumb={plant.thumb_pic} medium={plant.medium_pic}
-						large={plant.large_pic} />
+						thumb={plant.thumb_pic}
+						medium={plant.medium_pic}
+						large={plant.large_pic}
+						imageCreditDesc={plant.image_credit_desc}
+						imageCreditUrl={plant.image_credit_url}
+					/>
 				)
 			})}
 		</div>

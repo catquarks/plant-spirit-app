@@ -23,6 +23,27 @@ function PlantSummary(props){
 	)
 }
 
+function ImageCredit(props){
+	if (props.desc){
+		return(
+			<div>
+				Image credit: {props.desc} /
+				<a href={props.url}
+					target="_blank"
+				>
+					link
+				</a>
+			</div>
+		)
+	} else {
+		return(
+			<div>
+				<em>No image credit is available.</em>
+			</div>
+		)
+	}
+}
+
 class PlantShow extends Component {
 	constructor(props){
 		super(props)
@@ -51,6 +72,10 @@ class PlantShow extends Component {
 							/>
 							<FeelingsList title='Alleviates:'
 								feelings={this.props.currentFeelings}
+							/>
+							<ImageCredit
+								desc={this.props.imageCreditDesc}
+								url={this.props.imageCreditUrl}
 							/>
 						</div>
 					</div>
