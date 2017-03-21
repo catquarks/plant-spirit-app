@@ -2,23 +2,15 @@ import React from 'react'
 import PlantShow from './plant_show'
 
 function PlantRoleTitle(props){
-	if (props.appMode === 'easing_plants'){
-		return(
-			<div id="plant-list-title">
-				<h3>Plants that alleviate this feeling:</h3>
-			</div>
-		)
-	} else {
-		return(
-			<div id="plant-list-title">
-				<h3>Plants that encourage this feeling:</h3>
-			</div>
-		)
-	}
+	return(
+		<div id="plant-list-title">
+			<h3>Plants that { easeOrEncourage(props.appMode) } this feeling:</h3>
+		</div>
+	)
 }
 
-function EaseOrEncourage(props){
-	if (props.appMode === 'easing_plants'){
+function easeOrEncourage(appMode){
+	if (appMode === 'easing_plants'){
 		return 'alleviate'
 	} else {
 		return 'encourage'
@@ -26,7 +18,7 @@ function EaseOrEncourage(props){
 }
 
 function plantsExist(plants){
-	if (plants.size > 0){
+	if (plants.length > 0){
 		return true
 	} else {
 		return false
@@ -61,7 +53,7 @@ export default function(props){
 			<div id="plants-list">
 				<div id="no-plant-list-title">
 					<h3>
-						No plants in our database { EaseOrEncourage(props.appMode) } this feeling.
+						No plants in our database { easeOrEncourage(props.appMode) } this feeling.
 					</h3>
 				</div>
 			</div>
