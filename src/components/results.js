@@ -12,7 +12,6 @@ class Results extends React.Component {
 					key={this.props.currentFeeling.id}
 					name={this.props.currentFeeling.name}
 					summary={this.props.currentFeeling.summary}
-					appMode={this.props.appMode}
 				/>
 				<PlantsList
 					plants={this.props.plants}
