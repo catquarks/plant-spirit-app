@@ -19,14 +19,14 @@ class FeelingForm extends React.Component {
 
 	handleChange(e){
 		this.setState({
-			query: e.target.value.toLowerCase()
+			query: e.target.value
 		})
 	}
 
 	getQueriedFeeling(){
 		return this.props.feelings.find(
 			feeling => {
-				return feeling.name.toLowerCase() === this.state.query
+				return feeling.name.toLowerCase() === this.state.query.toLowerCase()
 			}
 		)
 	}
