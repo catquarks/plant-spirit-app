@@ -42,7 +42,7 @@ class PlantShow extends Component {
 		super(props)
 		var long = false
 		if (props.summary){
-			long = props.summary.length > 140
+			long = props.summary.length > 150
 		}
 
 		this.state = {
