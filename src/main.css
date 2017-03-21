@@ -1783,18 +1783,24 @@ span.link, a.link {
     justify-content: space-between;
     align-content: center;
     padding: 0; }
+    #results #plants-list h3 {
+      border-radius: 3em 2em;
+      text-align: center;
+      display: block;
+      margin: auto;
+      background: rgba(0, 120, 70, 0.9); }
     #results #plants-list #plant-list-title {
       padding: 0.5em;
       width: 100%; }
       #results #plants-list #plant-list-title h3 {
-        border-radius: 3em 2em;
-        text-align: center;
-        display: block;
-        margin: auto;
         min-width: 5em;
         width: auto;
-        max-width: 15em;
-        background: rgba(0, 120, 70, 0.9); }
+        max-width: 15em; }
+    #results #plants-list #no-plant-list-title {
+      padding: 0.5em;
+      width: 100%; }
+      #results #plants-list #no-plant-list-title h3 {
+        max-width: 22em; }
     #results #plants-list .plant-show {
       margin: auto;
       border-radius: 1em 3em;
