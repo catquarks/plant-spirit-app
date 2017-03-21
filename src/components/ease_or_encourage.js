@@ -10,7 +10,7 @@ export default function(props){
 	} else {
 		return(
 			<span>
-				encourage
+				promote
 			</span>
 		)
 	}

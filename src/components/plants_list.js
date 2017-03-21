@@ -10,15 +10,8 @@ function PlantRoleTitle(props){
 	)
 }
 
-// function easeOrEncourage(appMode){
-// 	if (appMode === 'easing_plants'){
-// 		return 'alleviate'
-// 	} else {
-// 		return 'encourage'
-// 	}
-// }
-
 export default function(props){
+	
 	function plantsExist(plants){
 		if (plants.length > 0){
 			return true
@@ -34,7 +27,8 @@ export default function(props){
 					
 				{props.plants.map(plant => {
 					return(
-						<PlantShow key={plant.id} name={plant.name}
+						<PlantShow key={plant.id}
+							name={plant.name}
 							summary={plant.summary}
 							currentFeelings={plant.current_feelings}
 							futureFeelings={plant.future_feelings}

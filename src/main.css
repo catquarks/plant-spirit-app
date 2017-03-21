@@ -1809,6 +1809,10 @@ span.link, a.link {
       height: auto;
       background: rgba(0, 120, 70, 0.9);
       color: #444444; }
+      #results #plants-list .plant-show .link {
+        color: #42A5F5; }
+        #results #plants-list .plant-show .link:hover {
+          color: #00648c; }
       #results #plants-list .plant-show .image-area {
         min-width: inherit;
         height: 15em;
@@ -1826,10 +1830,14 @@ span.link, a.link {
       #results #plants-list .plant-show .image-credit {
         margin: 1em;
         opacity: 0.9; }
+      #results #plants-list .plant-show .contracted {
+        height: 21em; }
+      #results #plants-list .plant-show .expanded {
+        height: auto; }
       #results #plants-list .plant-show .summary-area {
         font-size: 0.9em;
         margin: 0.4em 0.4em;
-        height: 21em; }
+        /*height: 21em;*/ }
         #results #plants-list .plant-show .summary-area .summary-area-child {
           line-height: 1.3em;
           background: #dfffdd;

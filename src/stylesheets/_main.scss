@@ -321,6 +321,14 @@ span.link, a.link {
       background: $secondary-color;
       color: $text-color;
 
+      .link {
+        color: $link-color;
+
+        &:hover {
+          color: $link-hover-color;
+        }
+      }
+
       .image-area {
         min-width: inherit;
         height: 15em;
@@ -346,10 +354,18 @@ span.link, a.link {
         opacity: 0.9;
       }
 
+      .contracted {
+        height: 21em;
+      }
+
+      .expanded {
+        height: auto;
+      }
+
       .summary-area {
         font-size: 0.9em;
         margin: 0.4em 0.4em;
-        height: 21em;
+        /*height: 21em;*/
 
         .summary-area-child {
           line-height: 1.3em;

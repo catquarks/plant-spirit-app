@@ -24,13 +24,40 @@ function PlantSummary(props){
 	)
 }
 
+function ExpandPlantShow(props){
+	return(
+		<span
+			className="link"
+			onClick={()=>{
+				props.handleExpansion()
+			}}
+		>
+			Click to Expand this Card
+		</span>
+	)
+}
+
 class PlantShow extends Component {
 	constructor(props){
 		super(props)
+		var long = false
+		if (props.summary){
+			long = props.summary.length > 140
+		}
+
 		this.state = {
 			modalIsOpen: false,
-			currentModal: null
+			currentModal: null,
+			long: long,
+			summaryAreaClassName: 'summary-area contracted'
 		}
+	}
+
+	handleExpansion(){
+		this.setState({
+			summaryAreaClassName: 'summary-area expanded',
+			long: false
+		})
 	}
 
   render(){
@@ -38,7 +65,7 @@ class PlantShow extends Component {
 			<div className="card plant-show">
 				<Modal modalIsOpen={this.state.modalIsOpen}
           closeModal={closeModal.bind(this)}
-          imageSrc={this.state.imageSrc}
+          modalData={this.state.modalData}
           imageName={this.state.imageName}
           currentModal={this.state.currentModal}
         />
@@ -47,9 +74,10 @@ class PlantShow extends Component {
         	large={this.props.large}
         	handleModalClick={handleModalClick.bind(this)}
       	/>
-				<div className="summary-area">
+				<div className={this.state.summaryAreaClassName}>
 					<div className="summary-area-child">
 						{this.props.summary ? <PlantSummary summary={this.props.summary} /> : <PlantNoSummary term={this.props.name} />}
+						{this.state.long ? <ExpandPlantShow handleExpansion={this.handleExpansion.bind(this)} /> : null }
 						<div className="feeling-group">
 							<FeelingsList title='Promotes:'
 								feelings={this.props.futureFeelings}
